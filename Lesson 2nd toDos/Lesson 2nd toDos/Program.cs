@@ -120,8 +120,8 @@ namespace Lesson_2nd_toDos
             string area = var4.ToString();
 
 
-            Console.WriteLine("This is perimeter of the circle: " + per + "cm.");
-            Console.WriteLine("This is area of the circle: " + area + "cm²");
+            Console.WriteLine("The perimeter of the circle is: " + per + "cm.");
+            Console.WriteLine("The area of the circle is: " + area + "cm²");
         }
     }
 }
