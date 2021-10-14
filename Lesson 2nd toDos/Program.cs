@@ -74,27 +74,7 @@ namespace Lesson_2nd_toDos
             Console.WriteLine(input3 + input2 + input1);
         }
 
-        static void InputALetter (string input1)
-        {
-            char c1;
-
-
-            while (true)
-            {
-                try
-                {
-                    c1 = char.Parse(Console.ReadLine());
-                    break;
-                }
-                catch (Exception)
-                {
-
-                    Console.WriteLine("You should only add a character. Try again!");
-                }
-            }
-
-            var input1 = c1.ToString();
-        }
+      
 
         static void Main2(string[] args)
         {
