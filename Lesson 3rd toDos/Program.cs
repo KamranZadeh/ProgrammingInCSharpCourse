@@ -6,17 +6,19 @@ namespace Lesson_3rd_toDos
     {
         static void Main1(string[] args)
         {
-            Console.Write("Enter a number to know number is even or odd: ");
+            Console.Write("Enter two numbers, you will get a boolean answer true or false if the both numbers even or odd: ");
 
-            int num;
+            int num1;
+            int num2;
 
             while (true)
             {
                 try
                 {
-                    num = int.Parse(Console.ReadLine());
+                    num1 = int.Parse(Console.ReadLine());
                     break;
                 }
+
                 catch (Exception)
                 {
 
@@ -24,14 +26,24 @@ namespace Lesson_3rd_toDos
                 }
             }
 
-            if (num % 2 == 0)
+            while (true)
             {
-                Console.WriteLine("The number you added is even");
+                try
+                {
+                    num2 = int.Parse(Console.ReadLine());
+                    break;
+                }
+
+                catch (Exception)
+                {
+
+                    Console.WriteLine("You should add a number! Try again!");
+                }
             }
-            else
-            {
-                Console.WriteLine("The number you added is odd");
-            }
+
+            bool b = (num1%2 == 0 && num2%2 == 0) || (num1%2 != 0 && num2%2 !=0);
+
+            Console.WriteLine(b);
         }
 
         static void Main2(string[] args)
