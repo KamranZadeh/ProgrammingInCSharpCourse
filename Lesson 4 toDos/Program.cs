@@ -13,10 +13,10 @@ namespace Lesson_4_toDos
 
         }
 
-        static void Main2(string[] args)
+        static void Main(string[] args)
         {
 
-            var myBirtday = new DateTime(1994, 9, 14);
+            var myBirtday = new DateTime(1996, 11, 1);
             var myDayAge = DateTime.Now - myBirtday;
 
             Console.WriteLine(myDayAge.Days);
