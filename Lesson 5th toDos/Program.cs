@@ -81,7 +81,26 @@ namespace Lesson_5th_toDos
 
         static void Main6()
         {
-            Console.WriteLine("empty");
+            /* Write a program in C# to make such a pattern like right angle triangle with number 
+             * increased by 1. The pattern like :
+            1
+            2 3
+            4 5 6
+            7 8 9 10 */
+
+            int num = 1;
+
+            for (int i = 1; i < 10; i++)
+            {
+                
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write("{0} ", num++);
+                }
+
+                Console.Write("\n");
+
+            }
         }
 
         static void Main7()
@@ -115,11 +134,53 @@ namespace Lesson_5th_toDos
         {
             /* Write a C# program to find prime numbers up to users entered value.
                Exmpl: input-100, Result: 2, 3, 5, 7, 11, 13 ... 89, 97 */
-            
-            
-            
+
+            int count = int.Parse(Console.ReadLine());
+
+            for (int i = 2; i <= count; i++)
+            {
+                bool isPrime = true;
+
+                for (int j = 2; j < i; j++)
+                {
+                    if (i%j == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+                }
+
+                if (isPrime)
+                {
+                    Console.WriteLine(i);
+                }
+
+            }
+
+
         }
 
+        static void Main9()
+        {
+            /* Write a program in C# to check whether a number can be express as sum of two prime numbers.
+            Test Data :
+            Input a positive integer: 16
+            Expected Output :
+            16 = 3 + 13
+            16 = 5 + 11 */
+
+
+        }
+
+        static void Main10()
+        {
+            /* Write a program in C# to check whether a number is a palindrome (visual simmetric) or not. Test Data :
+            Input a number: 121
+            Expected Output :
+            121 is a palindrome number. */
+
+            
+        }
 
     }
 }
