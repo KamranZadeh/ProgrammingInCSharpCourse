@@ -160,7 +160,7 @@ namespace Lesson_5th_toDos
 
         }
 
-        static void Main9()
+        static void Main()
         {
             /* Write a program in C# to check whether a number can be express as sum of two prime numbers.
             Test Data :
@@ -169,8 +169,39 @@ namespace Lesson_5th_toDos
             16 = 3 + 13
             16 = 5 + 11 */
 
+            Console.WriteLine("?????????????????????????????????????????????????????????\n");
+
+
+           
+
 
         }
+
+        static int CheckNumIsPrime(int num)
+        {
+            num = int.Parse(Console.ReadLine());
+            int counter = 0;
+
+            for (int i = 2; i < num; i++)
+            {
+                if (num % i == 0)
+                {
+                    counter++;
+                }
+            }
+
+            if (counter == 0 && num > 1)
+            {
+                return num;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+
+
 
         static void Main10()
         {
@@ -179,7 +210,27 @@ namespace Lesson_5th_toDos
             Expected Output :
             121 is a palindrome number. */
 
+            int n = int.Parse(Console.ReadLine());
+            string numN = Convert.ToString(n);
+
+            char[] cArray = numN.ToCharArray();
+            string reverse = "";
             
+            for (int i = cArray.Length - 1; i > -1; i--)
+            {
+                reverse += cArray[i];
+            }
+
+            if (numN==reverse)
+            {
+                Console.WriteLine("{0} is a palindrome number.", numN);
+            }
+            else
+            {
+                Console.WriteLine("{0} is NOT a palindrome number.", numN);
+            }
+
+
         }
 
     }
