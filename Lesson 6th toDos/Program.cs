@@ -1,4 +1,17 @@
 ﻿using System;
+using System.Linq;
+using System.Threading;
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.Collections;
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.IO;
+using System.Reflection;
+using System.Runtime.Serialization;
+using System.Text.RegularExpressions;
+using System.Text;
 
 namespace Lesson_6th_toDos
 {
@@ -165,6 +178,66 @@ namespace Lesson_6th_toDos
             }
 
             Console.WriteLine("Count of spaces is " + counter);
+        }
+
+        static void Main()
+        {
+            int n=5;
+            string space = "";
+
+            for (int i = 0; i < n; i++)
+            {
+                
+
+                for (int j = 0; j < j-n; j--)
+                {
+                    
+                    space = space + " ";
+                }
+
+                for (int k = 0; k < 2*n-1; k++)
+                {
+                    space = space + "#";
+                    Console.WriteLine(space);
+                }
+
+                
+            }
+
+        }
+
+        static string catAndMouse(int x, int y, int z)
+        {
+            int catA = z - x;
+            int catB = z - y;
+
+            string resultA, resultB, resultC;
+
+            if (catA<0)
+            {
+                catA = -1 * catA;
+            }
+            if(catB<0)
+            {
+                catB = -1 * catB;
+            }
+
+            if (catA<catB)
+            {
+                resultA = "Cat A";
+                return resultA;
+            }
+            else if (catA>catB)
+            {
+                resultB = "Cat B";
+                return resultB;
+            }
+            else
+            {
+                resultC = "Mause C";
+                return resultC;
+            }
+
         }
 
     }
