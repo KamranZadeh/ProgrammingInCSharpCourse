@@ -180,33 +180,21 @@ namespace Lesson_6th_toDos
             Console.WriteLine("Count of spaces is " + counter);
         }
 
-        static void Main()
+        static void Main(String[] args)
         {
-            int n=5;
-            string space = "";
+            string hashes = new String('#', 10);
+            Console.WriteLine(hashes);
 
-            for (int i = 0; i < n; i++)
-            {
-                
-
-                for (int j = 0; j < j-n; j--)
-                {
-                    
-                    space = space + " ";
-                }
-
-                for (int k = 0; k < 2*n-1; k++)
-                {
-                    space = space + "#";
-                    Console.WriteLine(space);
-                }
-
-                
-            }
-
+            //var n = int.Parse(Console.ReadLine());
+            //for (int i = 1; i <= n; i++)
+            //{
+            //    var spaces = new String(' ', n - i);
+            //    var hashes = new String('#', i);
+            //    Console.WriteLine(spaces + hashes);
+            //}
         }
 
-        static string catAndMouse(int x, int y, int z)
+            static string catAndMouse(int x, int y, int z)
         {
             int catA = z - x;
             int catB = z - y;
