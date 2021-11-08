@@ -25,41 +25,4 @@ namespace toDo3
 
         }
     }
-
-    public class Person
-    {
-        public void Greet()
-        {
-            Console.WriteLine("Hello!");
-        }
-
-        public int age;
-        public void SetAge(int n)
-        {
-            age = n;
-        }
-
-    }
-
-    public class Student : Person
-    {
-        public void Study()
-        {
-            Console.WriteLine("I'm studying");
-        }
-
-        public void ShowAge()
-        {
-            Console.WriteLine($"I'm {age} years old");
-        }
-
-    }
-
-    public class Teacher : Person
-    {
-        public void Explain()
-        {
-            Console.WriteLine("I'm explaining");
-        }
-    }
 }

@@ -37,48 +37,4 @@ namespace toDo5
             }
         }
     }
-
-    class Person
-    {
-        string name;
-
-        public Person(string name)
-        {
-            this.name = name;
-        }
-
-        public string ToString()
-        {
-            return name;
-        }
-    }
-
-    class Student : Person
-    {
-
-        public void Study()
-        {
-            Console.WriteLine("Studying");
-        }
-
-        public Student(string name) : base(name)
-        {
-            
-        }
-
-    }
-
-    class Teacher : Person
-    {
-
-        public void Explain()
-        {
-            Console.WriteLine("Explaining");
-        }
-
-        public Teacher(string name) : base(name)
-        {
-            
-        }
-    }
 }
