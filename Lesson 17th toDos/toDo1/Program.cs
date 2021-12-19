@@ -13,7 +13,8 @@ namespace toDo1
 
             printUsersToConsole(list.Where(u => u.Age > 20).ToList());
 
-            var UsersListWithoutTurkishAndLowerAge10 = list.Where(u => (u.Age > 10) || (u.Country != "Turkey")).ToList();            
+            var UsersListWithoutTurkishAndLowerAge10 = list.Where(u => (u.Age > 10) || (u.Country != "Turkey")).ToList();   
+            
         }
     }
 }
