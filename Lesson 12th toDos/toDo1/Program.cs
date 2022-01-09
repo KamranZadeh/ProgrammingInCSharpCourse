@@ -7,43 +7,37 @@ namespace toDo1
     {
         static void Main(string[] args)
         {
-            const string myPath = @"D:\myFolder";
-            const string imgPath = @"D:\myFolder\images\";
-            const string videoPath = @"D:\myFolder\videos\";
-            const string docPath = @"D:\myFolder\documents\";
-            const string otherPath = @"D:\myFolder\otherFiles\";
+            const string myPath = args[0];
+            const string imgPath = @$"{myPath}\images\";
+            const string videoPath = @$"{myPath}\videos\";
+            const string docPath = @$"{myPath}\documents\";
+            const string otherPath = @$"{myPath}\otherFiles\";
 
             string[] files = Directory.GetFiles(myPath);
             string[] directories = Directory.GetDirectories(myPath);
 
             foreach (var file in files)
             {
-
                 if (Path.GetExtension(file) == ".jpg" || Path.GetExtension(file) == ".JPG")
                 {
                     File.Move(file, $"{imgPath}{Path.GetFileName(file)}", true);
                 }
-
                 else if (Path.GetExtension(file) == ".doc" || Path.GetExtension(file) == ".docx" || Path.GetExtension(file) == ".pdf" || Path.GetExtension(file) == ".jpg" || Path.GetExtension(file) == ".pptx")
                 {
                     File.Move(file, $"{docPath}{Path.GetFileName(file)}", true);
                 }
-
                 else if (Path.GetExtension(file) == ".mp4")
                 {
                     File.Move(file, $"{videoPath}{Path.GetFileName(file)}", true);
                 }
-
                 else if (File.ReadAllText(file) == String.Empty)
                 {
                     File.Delete(file);
                 }
-
                 else
                 {
                     File.Move(file, $"{otherPath}{Path.GetFileName(file)}", true);
                 }
-
             }
 
             foreach (var dir in directories)
