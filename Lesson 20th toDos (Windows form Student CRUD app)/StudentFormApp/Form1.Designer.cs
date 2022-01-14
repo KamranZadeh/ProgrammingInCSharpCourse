@@ -1,7 +1,4 @@
-﻿
-using System.Windows.Forms;
-
-namespace WinFormsApp1
+﻿namespace StudentFormApp
 {
     partial class Form1
     {
@@ -72,7 +69,7 @@ namespace WinFormsApp1
             this.buttonDelete.Location = new System.Drawing.Point(815, 425);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(116, 55);
-            this.buttonDelete.TabIndex = 1;
+            this.buttonDelete.TabIndex = 100;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = false;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
@@ -83,7 +80,7 @@ namespace WinFormsApp1
             this.buttonClear.Location = new System.Drawing.Point(815, 354);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(116, 55);
-            this.buttonClear.TabIndex = 2;
+            this.buttonClear.TabIndex = 100;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = false;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
@@ -94,7 +91,7 @@ namespace WinFormsApp1
             this.buttonUpdate.Location = new System.Drawing.Point(815, 277);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(116, 55);
-            this.buttonUpdate.TabIndex = 4;
+            this.buttonUpdate.TabIndex = 100;
             this.buttonUpdate.Text = "Update";
             this.buttonUpdate.UseVisualStyleBackColor = false;
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
@@ -105,7 +102,7 @@ namespace WinFormsApp1
             this.buttonAdd.Location = new System.Drawing.Point(815, 205);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(116, 55);
-            this.buttonAdd.TabIndex = 5;
+            this.buttonAdd.TabIndex = 99;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
@@ -125,7 +122,7 @@ namespace WinFormsApp1
             this.StudentNationality.Location = new System.Drawing.Point(511, 73);
             this.StudentNationality.Name = "StudentNationality";
             this.StudentNationality.Size = new System.Drawing.Size(190, 23);
-            this.StudentNationality.TabIndex = 17;
+            this.StudentNationality.TabIndex = 4;
             // 
             // label2
             // 
@@ -150,7 +147,7 @@ namespace WinFormsApp1
             this.StudentAddress.Location = new System.Drawing.Point(511, 117);
             this.StudentAddress.Name = "StudentAddress";
             this.StudentAddress.Size = new System.Drawing.Size(190, 23);
-            this.StudentAddress.TabIndex = 17;
+            this.StudentAddress.TabIndex = 5;
             // 
             // StudentID
             // 
@@ -159,21 +156,21 @@ namespace WinFormsApp1
             this.StudentID.Name = "StudentID";
             this.StudentID.PlaceholderText = "ID will be written automatically";
             this.StudentID.Size = new System.Drawing.Size(208, 23);
-            this.StudentID.TabIndex = 17;
+            this.StudentID.TabIndex = 0;
             // 
             // StudentName
             // 
             this.StudentName.Location = new System.Drawing.Point(191, 73);
             this.StudentName.Name = "StudentName";
             this.StudentName.Size = new System.Drawing.Size(208, 23);
-            this.StudentName.TabIndex = 17;
+            this.StudentName.TabIndex = 1;
             // 
             // StudentSurname
             // 
             this.StudentSurname.Location = new System.Drawing.Point(191, 117);
             this.StudentSurname.Name = "StudentSurname";
             this.StudentSurname.Size = new System.Drawing.Size(208, 23);
-            this.StudentSurname.TabIndex = 17;
+            this.StudentSurname.TabIndex = 2;
             // 
             // label4
             // 
@@ -277,7 +274,7 @@ namespace WinFormsApp1
             this.StudentDOB.Location = new System.Drawing.Point(511, 27);
             this.StudentDOB.Name = "StudentDOB";
             this.StudentDOB.Size = new System.Drawing.Size(190, 23);
-            this.StudentDOB.TabIndex = 17;
+            this.StudentDOB.TabIndex = 3;
             // 
             // radioMale
             // 
@@ -285,7 +282,7 @@ namespace WinFormsApp1
             this.radioMale.Location = new System.Drawing.Point(728, 74);
             this.radioMale.Name = "radioMale";
             this.radioMale.Size = new System.Drawing.Size(51, 19);
-            this.radioMale.TabIndex = 25;
+            this.radioMale.TabIndex = 6;
             this.radioMale.TabStop = true;
             this.radioMale.Text = "male";
             this.radioMale.UseVisualStyleBackColor = true;
@@ -297,7 +294,7 @@ namespace WinFormsApp1
             this.radioFemale.Location = new System.Drawing.Point(728, 109);
             this.radioFemale.Name = "radioFemale";
             this.radioFemale.Size = new System.Drawing.Size(61, 19);
-            this.radioFemale.TabIndex = 26;
+            this.radioFemale.TabIndex = 7;
             this.radioFemale.TabStop = true;
             this.radioFemale.Text = "female";
             this.radioFemale.UseVisualStyleBackColor = true;
@@ -308,7 +305,7 @@ namespace WinFormsApp1
             this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::WinFormsApp1.Properties.Resources.male;
+            this.pictureBox1.Image = global::StudentFormApp.Properties.Resources.male;
             this.pictureBox1.Location = new System.Drawing.Point(33, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(63, 66);
@@ -323,7 +320,7 @@ namespace WinFormsApp1
             this.button2.Location = new System.Drawing.Point(33, 98);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(63, 40);
-            this.button2.TabIndex = 29;
+            this.button2.TabIndex = 100;
             this.button2.Text = "Save";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
@@ -398,4 +395,3 @@ namespace WinFormsApp1
         private Button button2;
     }
 }
-

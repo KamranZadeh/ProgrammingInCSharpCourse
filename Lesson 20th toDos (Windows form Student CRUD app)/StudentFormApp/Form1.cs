@@ -1,15 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace WinFormsApp1
+namespace StudentFormApp
 {
     public partial class Form1 : Form
     {
@@ -26,7 +17,7 @@ namespace WinFormsApp1
                 }
             }
         }
-        
+
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             Add();
@@ -46,14 +37,14 @@ namespace WinFormsApp1
                 {
                     if (radioMale.Checked)
                     {
-                        pictureBox1.Image = Properties.Resources.male;
+                        pictureBox1.Image = StudentFormApp.Properties.Resources.male;
                         MemoryStream mmst = new MemoryStream();
                         pictureBox1.Image.Save(mmst, pictureBox1.Image.RawFormat);
                         img = mmst.ToArray();
                     }
                     else if (radioFemale.Checked)
                     {
-                        pictureBox1.Image = Properties.Resources.female;
+                        pictureBox1.Image = StudentFormApp.Properties.Resources.female;
                         MemoryStream mmst = new MemoryStream();
                         pictureBox1.Image.Save(mmst, pictureBox1.Image.RawFormat);
                         img = mmst.ToArray();
@@ -109,7 +100,7 @@ namespace WinFormsApp1
                 MaleOrFemale = "female";
             }
         }
-        
+
         private void buttonClear_Click(object sender, EventArgs e)
         {
             makeDefault();
@@ -120,23 +111,32 @@ namespace WinFormsApp1
         {
 
             //some problem here
-            index = e.RowIndex;
-
-            if (index >= 0)
+            try
             {
-                var row = dataGrid.Rows[index];
-
-                if (row != null && row.Cells[index] != null)
+                index = e.RowIndex;
+                if (index >= 0)
                 {
-                    StudentID.Text = row.Cells[1].Value.ToString();
-                    StudentName.Text = row.Cells[2].Value.ToString();
-                    StudentSurname.Text = row.Cells[3].Value.ToString();
-                    StudentDOB.Text = row.Cells[4].Value.ToString();
-                    StudentNationality.Text = row.Cells[5].Value.ToString();
-                    StudentAddress.Text = row.Cells[6].Value.ToString();
-                    MaleOrFemale = row.Cells[7].Value.ToString();
+                    var row = dataGrid.Rows[index];
+                    DataGridViewCell viewCell = dataGrid.CurrentCell;
+                    
+
+                    if (viewCell.Selected && viewCell != null && row != null && row.Cells[index] != null)
+                    {
+                        StudentID.Text = row.Cells[1].Value.ToString();
+                        StudentName.Text = row.Cells[2].Value.ToString();
+                        StudentSurname.Text = row.Cells[3].Value.ToString();
+                        StudentDOB.Text = row.Cells[4].Value.ToString();
+                        StudentNationality.Text = row.Cells[5].Value.ToString();
+                        StudentAddress.Text = row.Cells[6].Value.ToString();
+                        MaleOrFemale = row.Cells[7].Value.ToString();
+                    }
                 }
-            }        
+            }
+            catch (Exception)
+            {
+
+            }
+            
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
@@ -179,10 +179,9 @@ namespace WinFormsApp1
             img = mmst.ToArray();
         }
 
-        const string myPath = @"D:\myFolder\Students";
+        const string myPath = @"..\..\..\students\";
         private void AddToFile(string fileName)
         {
-
             string text = $"Student's adding time: {DateTime.Now}\n" +
                     $"Name: {StudentName.Text}\n" +
                     $"Surname: {StudentSurname.Text}\n" +
@@ -191,9 +190,8 @@ namespace WinFormsApp1
                     $"Nationality: {StudentNationality.Text}\n" +
                     $"Address: {StudentAddress.Text}";
 
-            File.WriteAllText(myPath + "/" + fileName + ".doc", text);
+            File.WriteAllText(myPath + fileName + ".doc", text);
         }
-
 
         internal int GetNextId()
         {
@@ -219,7 +217,7 @@ namespace WinFormsApp1
         private void makeDefault()
         {
             img = null;
-            pictureBox1.Image = Properties.Resources.male;
+            pictureBox1.Image = StudentFormApp.Properties.Resources.male;
             StudentName.Text = "";
             StudentID.Text = "";
             StudentSurname.Text = "";
@@ -234,7 +232,6 @@ namespace WinFormsApp1
 
         private List<Student> GetAllStudentsList()
         {
-
             var result = new List<Student>();
 
             var directory = new DirectoryInfo(myPath);
@@ -255,9 +252,7 @@ namespace WinFormsApp1
                 };
                 result.Add(student);
             }
-
             return result;
         }
-        
     }
 }
