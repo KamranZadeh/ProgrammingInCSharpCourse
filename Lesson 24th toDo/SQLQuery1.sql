@@ -49,5 +49,5 @@ insert into Employees(FirstName, LastName, EmploymentDate, DepartmentId, Manager
 --Write a query to return EmployeeFirstName, EmployeeLastName, ManagerFirstName, ManagerLastName, DepartmentName result
 	 
 select e.FirstName, e.LastName,  m.FirstName + ' '+ m.LastName as Superior, d.Name as DepartmentName from Employees e
-join Employees m on m.Id = e.ManagerId
+left join Employees m on m.Id = e.ManagerId
 join departments d on e.DepartmentId = d.Id
