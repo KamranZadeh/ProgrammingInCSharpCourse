@@ -16,6 +16,18 @@ namespace StudentFormApp
                     dataGrid.Rows.Add(null, student.ID, student.Name, student.Surname, student.DateOfBirth, student.Nationality, student.Address, student.Gender);
                 }
             }
+
+            if (img == null)
+            {
+                if (radioMale.Checked)
+                {
+                    pictureBox1.Image = StudentFormApp.Properties.Resources.male;
+                }
+                else if (radioFemale.Checked)
+                {
+                    pictureBox1.Image = StudentFormApp.Properties.Resources.female;
+                }
+            }
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
