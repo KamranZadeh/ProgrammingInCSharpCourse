@@ -52,12 +52,12 @@
             this.Nationality = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentDOB = new System.Windows.Forms.TextBox();
             this.radioMale = new System.Windows.Forms.RadioButton();
             this.radioFemale = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.button2 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -269,13 +269,6 @@
             this.Gender.ReadOnly = true;
             this.Gender.Width = 80;
             // 
-            // StudentDOB
-            // 
-            this.StudentDOB.Location = new System.Drawing.Point(511, 27);
-            this.StudentDOB.Name = "StudentDOB";
-            this.StudentDOB.Size = new System.Drawing.Size(190, 23);
-            this.StudentDOB.TabIndex = 3;
-            // 
             // radioMale
             // 
             this.radioMale.AutoSize = true;
@@ -325,11 +318,25 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(511, 27);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(190, 23);
+            this.dateTimePicker1.TabIndex = 101;
+            this.dateTimePicker1.Value = new System.DateTime(2022, 1, 22, 0, 0, 0, 0);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(955, 524);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.radioFemale);
@@ -345,7 +352,6 @@
             this.Controls.Add(this.StudentAddress);
             this.Controls.Add(this.StudentName);
             this.Controls.Add(this.StudentID);
-            this.Controls.Add(this.StudentDOB);
             this.Controls.Add(this.StudentNationality);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonUpdate);
@@ -379,7 +385,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGrid;
-        private System.Windows.Forms.TextBox StudentDOB;
         private System.Windows.Forms.RadioButton radioMale;
         private System.Windows.Forms.RadioButton radioFemale;
         private DataGridViewImageColumn ProPic;
@@ -393,5 +398,7 @@
         private PictureBox pictureBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Button button2;
+        private DateTimePicker dateTimePicker1;
+        
     }
 }

@@ -7,7 +7,6 @@ use lesson24toDo
 --2.Employees (Id(int), FirstName(nvarchar(20) not null), LastName(nvarchar(20) not null), EmploymentDate (datetime), 
 --DepartmentId(int foreign key not null), ManagerId int self foreign key))
 
-
 create table Departments(
 Id int primary key identity(1,1),
 Name nvarchar(50) not null,
