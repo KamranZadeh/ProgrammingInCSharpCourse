@@ -36,12 +36,8 @@ namespace CourseManagementPortal
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
 
             panelStudent.BringToFront();
-            //panelTeacher.SendToBack();
-            //panelCourse.SendToBack();
 
             panelStudentBottom.BringToFront();
-            //panelTeacherBottom.SendToBack();
-            //panelCourseBottom.SendToBack();
             btnStudent.BackColor = Color.FromArgb(46, 51, 73);
 
             dataGridViewStudent.DataSource = StudentManager.GetStudents();
@@ -62,12 +58,8 @@ namespace CourseManagementPortal
             btnStudent.BackColor = Color.FromArgb(46, 51, 73);
 
             panelStudent.BringToFront();
-            //panelTeacher.SendToBack();
-            //panelCourse.SendToBack();
 
             panelStudentBottom.BringToFront();
-            //panelTeacherBottom.SendToBack();
-            //panelCourseBottom.SendToBack();
 
             dataGridViewStudent.DataSource = StudentManager.GetStudents();
         }
@@ -79,14 +71,8 @@ namespace CourseManagementPortal
             btnTeacher.BackColor = Color.FromArgb(46, 51, 73);
             btnStudent.BackColor = Color.FromArgb(24, 30, 54);
 
-            //panelStudent.SendToBack();
             panelTeacher.BringToFront();
-            //panelCourse.SendToBack();
-
-            //panelStudentBottom.SendToBack();
             panelTeacherBottom.BringToFront();
-            //panelCourseBottom.SendToBack();
-            //panelPlanStartBottom.SendToBack();
 
             dataGridViewTeacher.DataSource = TeacherManager.GetTeachers();
         }
@@ -98,12 +84,7 @@ namespace CourseManagementPortal
             btnCourse.BackColor = Color.FromArgb(46, 51, 73);
             btnStudent.BackColor = Color.FromArgb(24, 30, 54);
 
-            //panelStudent.SendToBack();
-            //panelTeacher.SendToBack();
             panelCourse.BringToFront();
-
-            //panelStudentBottom.SendToBack();
-            //panelTeacherBottom.SendToBack();
             panelCourseBottom.BringToFront();
 
             dataGridViewCourse.DataSource = CourseManager.GetCourses();
@@ -1040,5 +1021,72 @@ namespace CourseManagementPortal
         {
             SeeAllStudentInfo();
         }
+
+        void SearchCourse()
+        {
+            using (var connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            {
+                connection.Open();
+                var cmd = connection.CreateCommand();
+
+                BindingSource bindingSource1 = new BindingSource();
+                bindingSource1.DataSource = GetData(@$"declare @name varchar(50) = '%{textBoxSearchCourse.Text}%'
+
+                                                    select * from tableCourse
+                                                    where Name like @name");
+                dataGridViewCourse.DataSource = bindingSource1;
+
+            }
+        }
+
+        private void textBoxSearchCourse_TextChanged(object sender, EventArgs e)
+        {
+            SearchCourse();
+        }
+
+        void SearchTeacher()
+        {
+            using (var connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            {
+                connection.Open();
+                var cmd = connection.CreateCommand();
+
+                BindingSource bindingSource1 = new BindingSource();
+                bindingSource1.DataSource = GetData(@$"declare @name varchar(50) = '%{textBoxSearchTeacher.Text}%'
+
+                                                    select * from tableTeacher
+                                                    where Name like @name");
+                dataGridViewTeacher.DataSource = bindingSource1;
+
+            }
+        }
+
+        private void textBoxSearchTeacher_TextChanged(object sender, EventArgs e)
+        {
+            SearchTeacher();
+        }
+
+        void SearchStudent()
+        {
+            using (var connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            {
+                connection.Open();
+                var cmd = connection.CreateCommand();
+
+                BindingSource bindingSource1 = new BindingSource();
+                bindingSource1.DataSource = GetData(@$"declare @name varchar(50) = '%{textBoxStudentSearch.Text}%'
+
+                                                    select * from tableStudent
+                                                    where Name like @name");
+                dataGridViewStudent.DataSource = bindingSource1;
+
+            }
+        }
+
+        private void textBoxStudentSearch_TextChanged(object sender, EventArgs e)
+        {
+            SearchStudent();
+        }
+
     }
 }

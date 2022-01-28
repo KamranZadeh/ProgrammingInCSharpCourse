@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
             this.lbltitle = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -111,11 +110,11 @@
             this.buttonPlannedCourses = new System.Windows.Forms.Button();
             this.buttonOngoingCourses = new System.Windows.Forms.Button();
             this.panelLessonBottom = new System.Windows.Forms.Panel();
-            this.dataGridViewTeacher_s_Student = new System.Windows.Forms.DataGridView();
-            this.buttonTeacherS_Students = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.buttonLessonStudentInfo = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dataGridViewTeacher_s_Student = new System.Windows.Forms.DataGridView();
+            this.buttonLessonStudentInfo = new System.Windows.Forms.Button();
+            this.buttonTeacherS_Students = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -135,15 +134,6 @@
             this.panelLessonBottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeacher_s_Student)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // lbltitle
             // 
@@ -278,6 +268,7 @@
             // 
             resources.ApplyResources(this.textBoxStudentSearch, "textBoxStudentSearch");
             this.textBoxStudentSearch.Name = "textBoxStudentSearch";
+            this.textBoxStudentSearch.TextChanged += new System.EventHandler(this.textBoxStudentSearch_TextChanged);
             // 
             // labelSearchStudent
             // 
@@ -686,6 +677,7 @@
             // 
             resources.ApplyResources(this.textBoxSearchTeacher, "textBoxSearchTeacher");
             this.textBoxSearchTeacher.Name = "textBoxSearchTeacher";
+            this.textBoxSearchTeacher.TextChanged += new System.EventHandler(this.textBoxSearchTeacher_TextChanged);
             // 
             // label3
             // 
@@ -714,6 +706,7 @@
             // 
             resources.ApplyResources(this.textBoxSearchCourse, "textBoxSearchCourse");
             this.textBoxSearchCourse.Name = "textBoxSearchCourse";
+            this.textBoxSearchCourse.TextChanged += new System.EventHandler(this.textBoxSearchCourse_TextChanged);
             // 
             // label4
             // 
@@ -765,6 +758,18 @@
             resources.ApplyResources(this.panelLessonBottom, "panelLessonBottom");
             this.panelLessonBottom.Name = "panelLessonBottom";
             // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Name = "label8";
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Name = "label7";
+            // 
             // dataGridViewTeacher_s_Student
             // 
             this.dataGridViewTeacher_s_Student.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -773,19 +778,6 @@
             this.dataGridViewTeacher_s_Student.Name = "dataGridViewTeacher_s_Student";
             this.dataGridViewTeacher_s_Student.RowTemplate.Height = 25;
             // 
-            // buttonTeacherS_Students
-            // 
-            resources.ApplyResources(this.buttonTeacherS_Students, "buttonTeacherS_Students");
-            this.buttonTeacherS_Students.Name = "buttonTeacherS_Students";
-            this.buttonTeacherS_Students.UseVisualStyleBackColor = true;
-            this.buttonTeacherS_Students.Click += new System.EventHandler(this.buttonTeacherS_Students_Click);
-            // 
-            // label7
-            // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Name = "label7";
-            // 
             // buttonLessonStudentInfo
             // 
             resources.ApplyResources(this.buttonLessonStudentInfo, "buttonLessonStudentInfo");
@@ -793,11 +785,12 @@
             this.buttonLessonStudentInfo.UseVisualStyleBackColor = true;
             this.buttonLessonStudentInfo.Click += new System.EventHandler(this.buttonLessonStudentInfo_Click);
             // 
-            // label8
+            // buttonTeacherS_Students
             // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Name = "label8";
+            resources.ApplyResources(this.buttonTeacherS_Students, "buttonTeacherS_Students");
+            this.buttonTeacherS_Students.Name = "buttonTeacherS_Students";
+            this.buttonTeacherS_Students.UseVisualStyleBackColor = true;
+            this.buttonTeacherS_Students.Click += new System.EventHandler(this.buttonTeacherS_Students_Click);
             // 
             // Form1
             // 
@@ -805,20 +798,20 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.panelLessonBottom);
             this.Controls.Add(this.lbltitle);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelCourseBottom);
             this.Controls.Add(this.panelTeacherBottom);
-            this.Controls.Add(this.panelLesson);
+            this.Controls.Add(this.panelPlanStartBottom);
+            this.Controls.Add(this.panelStudentBottom);
             this.Controls.Add(this.panelStudent);
             this.Controls.Add(this.panelCourse);
             this.Controls.Add(this.panelPlanStartCourse);
             this.Controls.Add(this.panelTeacher);
-            this.Controls.Add(this.panelPlanStartBottom);
-            this.Controls.Add(this.panelStudentBottom);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Controls.Add(this.panelLesson);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Opacity = 0.97D;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
@@ -858,7 +851,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lbltitle;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;

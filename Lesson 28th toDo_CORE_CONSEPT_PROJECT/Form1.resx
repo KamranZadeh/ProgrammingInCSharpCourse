@@ -57,58 +57,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="button1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
-  </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1030, 12</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 29</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>X</value>
-  </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
-  </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="lbltitle.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lbltitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lbltitle.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 21pt, style=Bold</value>
   </data>
   <data name="lbltitle.Location" type="System.Drawing.Point, System.Drawing">
     <value>466, 27</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lbltitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
@@ -131,68 +94,11 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbltitle.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <metadata name="panel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="pictureBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 178</value>
-  </data>
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
   <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -465,6 +371,7 @@
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 73</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
@@ -482,6 +389,33 @@
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 178</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <metadata name="btnStudent.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -544,7 +478,7 @@
     <value>217, 48</value>
   </data>
   <data name="btnTeacher.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btnTeacher.Text" xml:space="preserve">
     <value> Teacher</value>
@@ -589,7 +523,7 @@
     <value>217, 48</value>
   </data>
   <data name="btnCourse.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="btnCourse.Text" xml:space="preserve">
     <value> Course</value>
@@ -631,7 +565,7 @@
     <value>217, 48</value>
   </data>
   <data name="btnPlanStartCourse.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="btnPlanStartCourse.Text" xml:space="preserve">
     <value>Plan or Start Course</value>
@@ -726,6 +660,36 @@
   <metadata name="buttonLesson.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="buttonLesson.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="buttonLesson.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonLesson.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Nirmala UI, 9.75pt, style=Bold</value>
+  </data>
+  <data name="buttonLesson.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonLesson.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 370</value>
+  </data>
+  <data name="buttonLesson.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="buttonLesson.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 48</value>
+  </data>
+  <data name="buttonLesson.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="buttonLesson.Text" xml:space="preserve">
+    <value>Lesson manager</value>
+  </data>
+  <data name="buttonLesson.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
   <data name="&gt;&gt;buttonLesson.Name" xml:space="preserve">
     <value>buttonLesson</value>
   </data>
@@ -763,125 +727,11 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <metadata name="buttonLesson.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="buttonLesson.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="buttonLesson.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="buttonLesson.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Nirmala UI, 9.75pt, style=Bold</value>
-  </data>
-  <data name="buttonLesson.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonLesson.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 370</value>
-  </data>
-  <data name="buttonLesson.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="buttonLesson.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 48</value>
-  </data>
-  <data name="buttonLesson.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="buttonLesson.Text" xml:space="preserve">
-    <value>Lesson manager</value>
-  </data>
-  <data name="buttonLesson.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
-  <data name="&gt;&gt;buttonLesson.Name" xml:space="preserve">
-    <value>buttonLesson</value>
-  </data>
-  <data name="&gt;&gt;buttonLesson.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonLesson.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;buttonLesson.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <metadata name="panelStudentBottom.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dataGridViewStudent.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="textBoxStudentSearch.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="labelSearchStudent.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="&gt;&gt;dataGridViewStudent.Name" xml:space="preserve">
-    <value>dataGridViewStudent</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewStudent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewStudent.Parent" xml:space="preserve">
-    <value>panelStudentBottom</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewStudent.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;textBoxStudentSearch.Name" xml:space="preserve">
-    <value>textBoxStudentSearch</value>
-  </data>
-  <data name="&gt;&gt;textBoxStudentSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxStudentSearch.Parent" xml:space="preserve">
-    <value>panelStudentBottom</value>
-  </data>
-  <data name="&gt;&gt;textBoxStudentSearch.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelSearchStudent.Name" xml:space="preserve">
-    <value>labelSearchStudent</value>
-  </data>
-  <data name="&gt;&gt;labelSearchStudent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelSearchStudent.Parent" xml:space="preserve">
-    <value>panelStudentBottom</value>
-  </data>
-  <data name="&gt;&gt;labelSearchStudent.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="panelStudentBottom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>241, 261</value>
-  </data>
-  <data name="panelStudentBottom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="panelStudentBottom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>813, 372</value>
-  </data>
-  <data name="panelStudentBottom.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;panelStudentBottom.Name" xml:space="preserve">
-    <value>panelStudentBottom</value>
-  </data>
-  <data name="&gt;&gt;panelStudentBottom.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelStudentBottom.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelStudentBottom.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
   <metadata name="dataGridViewStudent.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -969,179 +819,29 @@
   <data name="&gt;&gt;labelSearchStudent.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="dateTimePickerTeacher.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonTeacherUpdate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonTeacherDelete.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonClear3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonTeacherSave.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="textBoxTeacherId.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="textBoxTeacherProfession.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="textBoxTeacherName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="labelTeacher.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="textBoxTeacherSurname.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="&gt;&gt;dateTimePickerTeacher.Name" xml:space="preserve">
-    <value>dateTimePickerTeacher</value>
+  <data name="panelStudentBottom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 261</value>
   </data>
-  <data name="&gt;&gt;dateTimePickerTeacher.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dateTimePickerTeacher.Parent" xml:space="preserve">
-    <value>panelTeacher</value>
-  </data>
-  <data name="&gt;&gt;dateTimePickerTeacher.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;buttonTeacherUpdate.Name" xml:space="preserve">
-    <value>buttonTeacherUpdate</value>
-  </data>
-  <data name="&gt;&gt;buttonTeacherUpdate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonTeacherUpdate.Parent" xml:space="preserve">
-    <value>panelTeacher</value>
-  </data>
-  <data name="&gt;&gt;buttonTeacherUpdate.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;buttonTeacherDelete.Name" xml:space="preserve">
-    <value>buttonTeacherDelete</value>
-  </data>
-  <data name="&gt;&gt;buttonTeacherDelete.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonTeacherDelete.Parent" xml:space="preserve">
-    <value>panelTeacher</value>
-  </data>
-  <data name="&gt;&gt;buttonTeacherDelete.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;buttonClear3.Name" xml:space="preserve">
-    <value>buttonClear3</value>
-  </data>
-  <data name="&gt;&gt;buttonClear3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonClear3.Parent" xml:space="preserve">
-    <value>panelTeacher</value>
-  </data>
-  <data name="&gt;&gt;buttonClear3.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;buttonTeacherSave.Name" xml:space="preserve">
-    <value>buttonTeacherSave</value>
-  </data>
-  <data name="&gt;&gt;buttonTeacherSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonTeacherSave.Parent" xml:space="preserve">
-    <value>panelTeacher</value>
-  </data>
-  <data name="&gt;&gt;buttonTeacherSave.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;textBoxTeacherId.Name" xml:space="preserve">
-    <value>textBoxTeacherId</value>
-  </data>
-  <data name="&gt;&gt;textBoxTeacherId.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxTeacherId.Parent" xml:space="preserve">
-    <value>panelTeacher</value>
-  </data>
-  <data name="&gt;&gt;textBoxTeacherId.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;textBoxTeacherProfession.Name" xml:space="preserve">
-    <value>textBoxTeacherProfession</value>
-  </data>
-  <data name="&gt;&gt;textBoxTeacherProfession.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxTeacherProfession.Parent" xml:space="preserve">
-    <value>panelTeacher</value>
-  </data>
-  <data name="&gt;&gt;textBoxTeacherProfession.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;textBoxTeacherName.Name" xml:space="preserve">
-    <value>textBoxTeacherName</value>
-  </data>
-  <data name="&gt;&gt;textBoxTeacherName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxTeacherName.Parent" xml:space="preserve">
-    <value>panelTeacher</value>
-  </data>
-  <data name="&gt;&gt;textBoxTeacherName.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;labelTeacher.Name" xml:space="preserve">
-    <value>labelTeacher</value>
-  </data>
-  <data name="&gt;&gt;labelTeacher.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelTeacher.Parent" xml:space="preserve">
-    <value>panelTeacher</value>
-  </data>
-  <data name="&gt;&gt;labelTeacher.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;textBoxTeacherSurname.Name" xml:space="preserve">
-    <value>textBoxTeacherSurname</value>
-  </data>
-  <data name="&gt;&gt;textBoxTeacherSurname.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxTeacherSurname.Parent" xml:space="preserve">
-    <value>panelTeacher</value>
-  </data>
-  <data name="&gt;&gt;textBoxTeacherSurname.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="panelTeacher.Location" type="System.Drawing.Point, System.Drawing">
-    <value>237, 84</value>
-  </data>
-  <data name="panelTeacher.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="panelStudentBottom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>
   </data>
-  <data name="panelTeacher.Size" type="System.Drawing.Size, System.Drawing">
-    <value>813, 151</value>
+  <data name="panelStudentBottom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>813, 372</value>
   </data>
-  <data name="panelTeacher.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
+  <data name="panelStudentBottom.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
   </data>
-  <data name="&gt;&gt;panelTeacher.Name" xml:space="preserve">
-    <value>panelTeacher</value>
+  <data name="&gt;&gt;panelStudentBottom.Name" xml:space="preserve">
+    <value>panelStudentBottom</value>
   </data>
-  <data name="&gt;&gt;panelTeacher.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelStudentBottom.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panelTeacher.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelStudentBottom.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panelTeacher.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="&gt;&gt;panelStudentBottom.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <metadata name="dateTimePickerTeacher.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1153,7 +853,7 @@
     <value>213, 23</value>
   </data>
   <data name="dateTimePickerTeacher.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;dateTimePickerTeacher.Name" xml:space="preserve">
     <value>dateTimePickerTeacher</value>
@@ -1180,7 +880,7 @@
     <value>75, 25</value>
   </data>
   <data name="buttonTeacherUpdate.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="buttonTeacherUpdate.Text" xml:space="preserve">
     <value>UPDATE</value>
@@ -1210,7 +910,7 @@
     <value>75, 25</value>
   </data>
   <data name="buttonTeacherDelete.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>9</value>
   </data>
   <data name="buttonTeacherDelete.Text" xml:space="preserve">
     <value>DELETE</value>
@@ -1240,7 +940,7 @@
     <value>75, 25</value>
   </data>
   <data name="buttonClear3.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="buttonClear3.Text" xml:space="preserve">
     <value>CLEAR</value>
@@ -1270,7 +970,7 @@
     <value>75, 25</value>
   </data>
   <data name="buttonTeacherSave.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="buttonTeacherSave.Text" xml:space="preserve">
     <value>SAVE</value>
@@ -1423,7 +1123,7 @@
     <value>214, 23</value>
   </data>
   <data name="textBoxTeacherSurname.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;textBoxTeacherSurname.Name" xml:space="preserve">
     <value>textBoxTeacherSurname</value>
@@ -1437,179 +1137,32 @@
   <data name="&gt;&gt;textBoxTeacherSurname.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <metadata name="dateTimePickerEndDate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dateTimePickerStartDate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonPlanStartDelete.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonPlanStartClear.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonStartCourse.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="textBoxPlanStartCourseStudentID.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="textBoxPlanStartCourseTeacherID.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="textBoxPlanStartCourseCourseID.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="panelPlanStartCourse.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;dateTimePickerEndDate.Name" xml:space="preserve">
-    <value>dateTimePickerEndDate</value>
-  </data>
-  <data name="&gt;&gt;dateTimePickerEndDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dateTimePickerEndDate.Parent" xml:space="preserve">
-    <value>panelPlanStartCourse</value>
-  </data>
-  <data name="&gt;&gt;dateTimePickerEndDate.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dateTimePickerStartDate.Name" xml:space="preserve">
-    <value>dateTimePickerStartDate</value>
-  </data>
-  <data name="&gt;&gt;dateTimePickerStartDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dateTimePickerStartDate.Parent" xml:space="preserve">
-    <value>panelPlanStartCourse</value>
-  </data>
-  <data name="&gt;&gt;dateTimePickerStartDate.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;buttonPlanStartDelete.Name" xml:space="preserve">
-    <value>buttonPlanStartDelete</value>
-  </data>
-  <data name="&gt;&gt;buttonPlanStartDelete.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonPlanStartDelete.Parent" xml:space="preserve">
-    <value>panelPlanStartCourse</value>
-  </data>
-  <data name="&gt;&gt;buttonPlanStartDelete.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;buttonPlanStartClear.Name" xml:space="preserve">
-    <value>buttonPlanStartClear</value>
-  </data>
-  <data name="&gt;&gt;buttonPlanStartClear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonPlanStartClear.Parent" xml:space="preserve">
-    <value>panelPlanStartCourse</value>
-  </data>
-  <data name="&gt;&gt;buttonPlanStartClear.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;buttonPlanCourse.Name" xml:space="preserve">
-    <value>buttonPlanCourse</value>
-  </data>
-  <data name="&gt;&gt;buttonPlanCourse.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonPlanCourse.Parent" xml:space="preserve">
-    <value>panelPlanStartCourse</value>
-  </data>
-  <data name="&gt;&gt;buttonPlanCourse.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;buttonStartCourse.Name" xml:space="preserve">
-    <value>buttonStartCourse</value>
-  </data>
-  <data name="&gt;&gt;buttonStartCourse.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonStartCourse.Parent" xml:space="preserve">
-    <value>panelPlanStartCourse</value>
-  </data>
-  <data name="&gt;&gt;buttonStartCourse.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;textBoxPlanStartCourseStudentID.Name" xml:space="preserve">
-    <value>textBoxPlanStartCourseStudentID</value>
-  </data>
-  <data name="&gt;&gt;textBoxPlanStartCourseStudentID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxPlanStartCourseStudentID.Parent" xml:space="preserve">
-    <value>panelPlanStartCourse</value>
-  </data>
-  <data name="&gt;&gt;textBoxPlanStartCourseStudentID.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;textBoxPlanStartCourseTeacherID.Name" xml:space="preserve">
-    <value>textBoxPlanStartCourseTeacherID</value>
-  </data>
-  <data name="&gt;&gt;textBoxPlanStartCourseTeacherID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxPlanStartCourseTeacherID.Parent" xml:space="preserve">
-    <value>panelPlanStartCourse</value>
-  </data>
-  <data name="&gt;&gt;textBoxPlanStartCourseTeacherID.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>panelPlanStartCourse</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;textBoxPlanStartCourseCourseID.Name" xml:space="preserve">
-    <value>textBoxPlanStartCourseCourseID</value>
-  </data>
-  <data name="&gt;&gt;textBoxPlanStartCourseCourseID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxPlanStartCourseCourseID.Parent" xml:space="preserve">
-    <value>panelPlanStartCourse</value>
-  </data>
-  <data name="&gt;&gt;textBoxPlanStartCourseCourseID.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="panelPlanStartCourse.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="panelTeacher.Location" type="System.Drawing.Point, System.Drawing">
     <value>237, 84</value>
   </data>
-  <data name="panelPlanStartCourse.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="panelTeacher.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>
   </data>
-  <data name="panelPlanStartCourse.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelTeacher.Size" type="System.Drawing.Size, System.Drawing">
     <value>813, 151</value>
   </data>
-  <data name="panelPlanStartCourse.TabIndex" type="System.Int32, mscorlib">
+  <data name="panelTeacher.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
   </data>
-  <data name="&gt;&gt;panelPlanStartCourse.Name" xml:space="preserve">
-    <value>panelPlanStartCourse</value>
+  <data name="&gt;&gt;panelTeacher.Name" xml:space="preserve">
+    <value>panelTeacher</value>
   </data>
-  <data name="&gt;&gt;panelPlanStartCourse.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelTeacher.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panelPlanStartCourse.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelTeacher.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panelPlanStartCourse.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="&gt;&gt;panelTeacher.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="panelPlanStartCourse.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <metadata name="dateTimePickerEndDate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1621,7 +1174,7 @@
     <value>213, 23</value>
   </data>
   <data name="dateTimePickerEndDate.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;dateTimePickerEndDate.Name" xml:space="preserve">
     <value>dateTimePickerEndDate</value>
@@ -1645,7 +1198,7 @@
     <value>213, 23</value>
   </data>
   <data name="dateTimePickerStartDate.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;dateTimePickerStartDate.Name" xml:space="preserve">
     <value>dateTimePickerStartDate</value>
@@ -1672,7 +1225,7 @@
     <value>75, 25</value>
   </data>
   <data name="buttonPlanStartDelete.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>9</value>
   </data>
   <data name="buttonPlanStartDelete.Text" xml:space="preserve">
     <value>DELETE</value>
@@ -1702,7 +1255,7 @@
     <value>75, 25</value>
   </data>
   <data name="buttonPlanStartClear.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="buttonPlanStartClear.Text" xml:space="preserve">
     <value>CLEAR</value>
@@ -1729,7 +1282,7 @@
     <value>75, 25</value>
   </data>
   <data name="buttonPlanCourse.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="buttonPlanCourse.Text" xml:space="preserve">
     <value>PLAN</value>
@@ -1759,7 +1312,7 @@
     <value>75, 25</value>
   </data>
   <data name="buttonStartCourse.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="buttonStartCourse.Text" xml:space="preserve">
     <value>START</value>
@@ -1882,7 +1435,7 @@
     <value>214, 23</value>
   </data>
   <data name="textBoxPlanStartCourseCourseID.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;textBoxPlanStartCourseCourseID.Name" xml:space="preserve">
     <value>textBoxPlanStartCourseCourseID</value>
@@ -1896,164 +1449,29 @@
   <data name="&gt;&gt;textBoxPlanStartCourseCourseID.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <metadata name="buttonCourseUpdate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonCourseDelete.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonClear2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonCourseSave.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="textBoxCourseDuration.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="textBoxCourseId.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="textBoxCoursePrice.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="textBoxCourseName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="labelCourse.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="&gt;&gt;buttonCourseUpdate.Name" xml:space="preserve">
-    <value>buttonCourseUpdate</value>
-  </data>
-  <data name="&gt;&gt;buttonCourseUpdate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonCourseUpdate.Parent" xml:space="preserve">
-    <value>panelCourse</value>
-  </data>
-  <data name="&gt;&gt;buttonCourseUpdate.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;buttonCourseDelete.Name" xml:space="preserve">
-    <value>buttonCourseDelete</value>
-  </data>
-  <data name="&gt;&gt;buttonCourseDelete.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonCourseDelete.Parent" xml:space="preserve">
-    <value>panelCourse</value>
-  </data>
-  <data name="&gt;&gt;buttonCourseDelete.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;buttonClear2.Name" xml:space="preserve">
-    <value>buttonClear2</value>
-  </data>
-  <data name="&gt;&gt;buttonClear2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonClear2.Parent" xml:space="preserve">
-    <value>panelCourse</value>
-  </data>
-  <data name="&gt;&gt;buttonClear2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;buttonCourseSave.Name" xml:space="preserve">
-    <value>buttonCourseSave</value>
-  </data>
-  <data name="&gt;&gt;buttonCourseSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonCourseSave.Parent" xml:space="preserve">
-    <value>panelCourse</value>
-  </data>
-  <data name="&gt;&gt;buttonCourseSave.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;textBoxCourseDuration.Name" xml:space="preserve">
-    <value>textBoxCourseDuration</value>
-  </data>
-  <data name="&gt;&gt;textBoxCourseDuration.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxCourseDuration.Parent" xml:space="preserve">
-    <value>panelCourse</value>
-  </data>
-  <data name="&gt;&gt;textBoxCourseDuration.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;textBoxCourseId.Name" xml:space="preserve">
-    <value>textBoxCourseId</value>
-  </data>
-  <data name="&gt;&gt;textBoxCourseId.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxCourseId.Parent" xml:space="preserve">
-    <value>panelCourse</value>
-  </data>
-  <data name="&gt;&gt;textBoxCourseId.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;textBoxCoursePrice.Name" xml:space="preserve">
-    <value>textBoxCoursePrice</value>
-  </data>
-  <data name="&gt;&gt;textBoxCoursePrice.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxCoursePrice.Parent" xml:space="preserve">
-    <value>panelCourse</value>
-  </data>
-  <data name="&gt;&gt;textBoxCoursePrice.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;textBoxCourseName.Name" xml:space="preserve">
-    <value>textBoxCourseName</value>
-  </data>
-  <data name="&gt;&gt;textBoxCourseName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxCourseName.Parent" xml:space="preserve">
-    <value>panelCourse</value>
-  </data>
-  <data name="&gt;&gt;textBoxCourseName.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;labelCourse.Name" xml:space="preserve">
-    <value>labelCourse</value>
-  </data>
-  <data name="&gt;&gt;labelCourse.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelCourse.Parent" xml:space="preserve">
-    <value>panelCourse</value>
-  </data>
-  <data name="&gt;&gt;labelCourse.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="panelCourse.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="panelPlanStartCourse.Location" type="System.Drawing.Point, System.Drawing">
     <value>237, 84</value>
   </data>
-  <data name="panelCourse.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="panelPlanStartCourse.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>
   </data>
-  <data name="panelCourse.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelPlanStartCourse.Size" type="System.Drawing.Size, System.Drawing">
     <value>813, 151</value>
   </data>
-  <data name="panelCourse.TabIndex" type="System.Int32, mscorlib">
+  <data name="panelPlanStartCourse.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
   </data>
-  <data name="&gt;&gt;panelCourse.Name" xml:space="preserve">
-    <value>panelCourse</value>
+  <data name="&gt;&gt;panelPlanStartCourse.Name" xml:space="preserve">
+    <value>panelPlanStartCourse</value>
   </data>
-  <data name="&gt;&gt;panelCourse.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelPlanStartCourse.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panelCourse.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelPlanStartCourse.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panelCourse.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;panelPlanStartCourse.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <metadata name="buttonCourseUpdate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2068,7 +1486,7 @@
     <value>75, 25</value>
   </data>
   <data name="buttonCourseUpdate.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="buttonCourseUpdate.Text" xml:space="preserve">
     <value>UPDATE</value>
@@ -2098,7 +1516,7 @@
     <value>75, 25</value>
   </data>
   <data name="buttonCourseDelete.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="buttonCourseDelete.Text" xml:space="preserve">
     <value>DELETE</value>
@@ -2128,7 +1546,7 @@
     <value>75, 25</value>
   </data>
   <data name="buttonClear2.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="buttonClear2.Text" xml:space="preserve">
     <value>CLEAR</value>
@@ -2245,7 +1663,7 @@
     <value>215, 23</value>
   </data>
   <data name="textBoxCoursePrice.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;textBoxCoursePrice.Name" xml:space="preserve">
     <value>textBoxCoursePrice</value>
@@ -2325,140 +1743,29 @@
   <data name="&gt;&gt;labelCourse.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <metadata name="labelTeacherLesson.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>panelLesson</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dateTimePickerLessonDate.Name" xml:space="preserve">
-    <value>dateTimePickerLessonDate</value>
-  </data>
-  <data name="&gt;&gt;dateTimePickerLessonDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dateTimePickerLessonDate.Parent" xml:space="preserve">
-    <value>panelLesson</value>
-  </data>
-  <data name="&gt;&gt;dateTimePickerLessonDate.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>panelLesson</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;richTextBoxLesson.Name" xml:space="preserve">
-    <value>richTextBoxLesson</value>
-  </data>
-  <data name="&gt;&gt;richTextBoxLesson.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;richTextBoxLesson.Parent" xml:space="preserve">
-    <value>panelLesson</value>
-  </data>
-  <data name="&gt;&gt;richTextBoxLesson.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;checkBoxLesson.Name" xml:space="preserve">
-    <value>checkBoxLesson</value>
-  </data>
-  <data name="&gt;&gt;checkBoxLesson.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBoxLesson.Parent" xml:space="preserve">
-    <value>panelLesson</value>
-  </data>
-  <data name="&gt;&gt;checkBoxLesson.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;buttonLessonAddComment.Name" xml:space="preserve">
-    <value>buttonLessonAddComment</value>
-  </data>
-  <data name="&gt;&gt;buttonLessonAddComment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonLessonAddComment.Parent" xml:space="preserve">
-    <value>panelLesson</value>
-  </data>
-  <data name="&gt;&gt;buttonLessonAddComment.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;textBoxLessonTeacherID.Name" xml:space="preserve">
-    <value>textBoxLessonTeacherID</value>
-  </data>
-  <data name="&gt;&gt;textBoxLessonTeacherID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxLessonTeacherID.Parent" xml:space="preserve">
-    <value>panelLesson</value>
-  </data>
-  <data name="&gt;&gt;textBoxLessonTeacherID.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;labelTeacherLesson.Name" xml:space="preserve">
-    <value>labelTeacherLesson</value>
-  </data>
-  <data name="&gt;&gt;labelTeacherLesson.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelTeacherLesson.Parent" xml:space="preserve">
-    <value>panelLesson</value>
-  </data>
-  <data name="&gt;&gt;labelTeacherLesson.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;textBoxLessonStudentId.Name" xml:space="preserve">
-    <value>textBoxLessonStudentId</value>
-  </data>
-  <data name="&gt;&gt;textBoxLessonStudentId.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxLessonStudentId.Parent" xml:space="preserve">
-    <value>panelLesson</value>
-  </data>
-  <data name="&gt;&gt;textBoxLessonStudentId.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="panelLesson.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="panelCourse.Location" type="System.Drawing.Point, System.Drawing">
     <value>237, 84</value>
   </data>
-  <data name="panelLesson.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="panelCourse.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>
   </data>
-  <data name="panelLesson.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelCourse.Size" type="System.Drawing.Size, System.Drawing">
     <value>813, 151</value>
   </data>
-  <data name="panelLesson.TabIndex" type="System.Int32, mscorlib">
+  <data name="panelCourse.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
   </data>
-  <data name="&gt;&gt;panelLesson.Name" xml:space="preserve">
-    <value>panelLesson</value>
+  <data name="&gt;&gt;panelCourse.Name" xml:space="preserve">
+    <value>panelCourse</value>
   </data>
-  <data name="&gt;&gt;panelLesson.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelCourse.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panelLesson.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelCourse.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panelLesson.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;panelCourse.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2497,7 +1804,7 @@
     <value>192, 23</value>
   </data>
   <data name="dateTimePickerLessonDate.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;dateTimePickerLessonDate.Name" xml:space="preserve">
     <value>dateTimePickerLessonDate</value>
@@ -2545,7 +1852,7 @@
     <value>288, 88</value>
   </data>
   <data name="richTextBoxLesson.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>5</value>
   </data>
   <data name="richTextBoxLesson.Text" xml:space="preserve">
     <value />
@@ -2575,7 +1882,7 @@
     <value>97, 27</value>
   </data>
   <data name="checkBoxLesson.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>4</value>
   </data>
   <data name="checkBoxLesson.Text" xml:space="preserve">
     <value>AT LESSON?</value>
@@ -2602,7 +1909,7 @@
     <value>81, 30</value>
   </data>
   <data name="buttonLessonAddComment.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="buttonLessonAddComment.Text" xml:space="preserve">
     <value>ADD</value>
@@ -2695,7 +2002,7 @@
     <value>107, 23</value>
   </data>
   <data name="textBoxLessonStudentId.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;textBoxLessonStudentId.Name" xml:space="preserve">
     <value>textBoxLessonStudentId</value>
@@ -2708,6 +2015,30 @@
   </data>
   <data name="&gt;&gt;textBoxLessonStudentId.ZOrder" xml:space="preserve">
     <value>8</value>
+  </data>
+  <data name="panelLesson.Location" type="System.Drawing.Point, System.Drawing">
+    <value>237, 84</value>
+  </data>
+  <data name="panelLesson.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="panelLesson.Size" type="System.Drawing.Size, System.Drawing">
+    <value>813, 151</value>
+  </data>
+  <data name="panelLesson.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;panelLesson.Name" xml:space="preserve">
+    <value>panelLesson</value>
+  </data>
+  <data name="&gt;&gt;panelLesson.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelLesson.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelLesson.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <metadata name="dateTimePickerStudentBirthDate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2758,135 +2089,6 @@
     <value>panelStudent</value>
   </data>
   <data name="&gt;&gt;textBoxStudentSurname.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <metadata name="buttonStudentUpdate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonStudentDelete.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonClear.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonStudentSave.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="textBoxStudentId.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="textBoxStudentName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="labelStudent.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="&gt;&gt;buttonStudentUpdate.Name" xml:space="preserve">
-    <value>buttonStudentUpdate</value>
-  </data>
-  <data name="&gt;&gt;buttonStudentUpdate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonStudentUpdate.Parent" xml:space="preserve">
-    <value>panelStudent</value>
-  </data>
-  <data name="&gt;&gt;buttonStudentUpdate.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;buttonStudentDelete.Name" xml:space="preserve">
-    <value>buttonStudentDelete</value>
-  </data>
-  <data name="&gt;&gt;buttonStudentDelete.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonStudentDelete.Parent" xml:space="preserve">
-    <value>panelStudent</value>
-  </data>
-  <data name="&gt;&gt;buttonStudentDelete.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;buttonClear.Name" xml:space="preserve">
-    <value>buttonClear</value>
-  </data>
-  <data name="&gt;&gt;buttonClear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonClear.Parent" xml:space="preserve">
-    <value>panelStudent</value>
-  </data>
-  <data name="&gt;&gt;buttonClear.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;buttonStudentSave.Name" xml:space="preserve">
-    <value>buttonStudentSave</value>
-  </data>
-  <data name="&gt;&gt;buttonStudentSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonStudentSave.Parent" xml:space="preserve">
-    <value>panelStudent</value>
-  </data>
-  <data name="&gt;&gt;buttonStudentSave.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;textBoxStudentId.Name" xml:space="preserve">
-    <value>textBoxStudentId</value>
-  </data>
-  <data name="&gt;&gt;textBoxStudentId.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxStudentId.Parent" xml:space="preserve">
-    <value>panelStudent</value>
-  </data>
-  <data name="&gt;&gt;textBoxStudentId.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;textBoxStudentName.Name" xml:space="preserve">
-    <value>textBoxStudentName</value>
-  </data>
-  <data name="&gt;&gt;textBoxStudentName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxStudentName.Parent" xml:space="preserve">
-    <value>panelStudent</value>
-  </data>
-  <data name="&gt;&gt;textBoxStudentName.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;labelStudent.Name" xml:space="preserve">
-    <value>labelStudent</value>
-  </data>
-  <data name="&gt;&gt;labelStudent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelStudent.Parent" xml:space="preserve">
-    <value>panelStudent</value>
-  </data>
-  <data name="&gt;&gt;labelStudent.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="panelStudent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>237, 84</value>
-  </data>
-  <data name="panelStudent.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="panelStudent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>813, 151</value>
-  </data>
-  <data name="panelStudent.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
-  </data>
-  <data name="&gt;&gt;panelStudent.Name" xml:space="preserve">
-    <value>panelStudent</value>
-  </data>
-  <data name="&gt;&gt;panelStudent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelStudent.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelStudent.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <metadata name="buttonStudentUpdate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -3105,78 +2307,33 @@
   <data name="&gt;&gt;labelStudent.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="panelStudent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>237, 84</value>
+  </data>
+  <data name="panelStudent.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="panelStudent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>813, 151</value>
+  </data>
+  <data name="panelStudent.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;panelStudent.Name" xml:space="preserve">
+    <value>panelStudent</value>
+  </data>
+  <data name="&gt;&gt;panelStudent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelStudent.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelStudent.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
   <metadata name="panelTeacherBottom.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dataGridViewTeacher.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="textBoxSearchTeacher.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="&gt;&gt;dataGridViewTeacher.Name" xml:space="preserve">
-    <value>dataGridViewTeacher</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTeacher.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTeacher.Parent" xml:space="preserve">
-    <value>panelTeacherBottom</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTeacher.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;textBoxSearchTeacher.Name" xml:space="preserve">
-    <value>textBoxSearchTeacher</value>
-  </data>
-  <data name="&gt;&gt;textBoxSearchTeacher.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxSearchTeacher.Parent" xml:space="preserve">
-    <value>panelTeacherBottom</value>
-  </data>
-  <data name="&gt;&gt;textBoxSearchTeacher.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>panelTeacherBottom</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="panelTeacherBottom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>237, 261</value>
-  </data>
-  <data name="panelTeacherBottom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="panelTeacherBottom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>813, 372</value>
-  </data>
-  <data name="panelTeacherBottom.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;panelTeacherBottom.Name" xml:space="preserve">
-    <value>panelTeacherBottom</value>
-  </data>
-  <data name="&gt;&gt;panelTeacherBottom.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelTeacherBottom.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelTeacherBottom.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <metadata name="dataGridViewTeacher.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3267,78 +2424,33 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="panelTeacherBottom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>237, 261</value>
+  </data>
+  <data name="panelTeacherBottom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="panelTeacherBottom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>813, 372</value>
+  </data>
+  <data name="panelTeacherBottom.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;panelTeacherBottom.Name" xml:space="preserve">
+    <value>panelTeacherBottom</value>
+  </data>
+  <data name="&gt;&gt;panelTeacherBottom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelTeacherBottom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelTeacherBottom.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <metadata name="panelCourseBottom.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dataGridViewCourse.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="textBoxSearchCourse.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="&gt;&gt;dataGridViewCourse.Name" xml:space="preserve">
-    <value>dataGridViewCourse</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewCourse.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewCourse.Parent" xml:space="preserve">
-    <value>panelCourseBottom</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewCourse.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;textBoxSearchCourse.Name" xml:space="preserve">
-    <value>textBoxSearchCourse</value>
-  </data>
-  <data name="&gt;&gt;textBoxSearchCourse.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxSearchCourse.Parent" xml:space="preserve">
-    <value>panelCourseBottom</value>
-  </data>
-  <data name="&gt;&gt;textBoxSearchCourse.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>panelCourseBottom</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="panelCourseBottom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>237, 261</value>
-  </data>
-  <data name="panelCourseBottom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="panelCourseBottom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>813, 372</value>
-  </data>
-  <data name="panelCourseBottom.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;panelCourseBottom.Name" xml:space="preserve">
-    <value>panelCourseBottom</value>
-  </data>
-  <data name="&gt;&gt;panelCourseBottom.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelCourseBottom.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelCourseBottom.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <metadata name="dataGridViewCourse.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3435,78 +2547,33 @@
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="panelCourseBottom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>237, 261</value>
+  </data>
+  <data name="panelCourseBottom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="panelCourseBottom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>813, 372</value>
+  </data>
+  <data name="panelCourseBottom.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;panelCourseBottom.Name" xml:space="preserve">
+    <value>panelCourseBottom</value>
+  </data>
+  <data name="&gt;&gt;panelCourseBottom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelCourseBottom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelCourseBottom.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <metadata name="panelPlanStartBottom.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dataGridViewPlanStart.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonPlannedCourses.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonOngoingCourses.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="&gt;&gt;dataGridViewPlanStart.Name" xml:space="preserve">
-    <value>dataGridViewPlanStart</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewPlanStart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewPlanStart.Parent" xml:space="preserve">
-    <value>panelPlanStartBottom</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewPlanStart.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;buttonPlannedCourses.Name" xml:space="preserve">
-    <value>buttonPlannedCourses</value>
-  </data>
-  <data name="&gt;&gt;buttonPlannedCourses.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonPlannedCourses.Parent" xml:space="preserve">
-    <value>panelPlanStartBottom</value>
-  </data>
-  <data name="&gt;&gt;buttonPlannedCourses.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;buttonOngoingCourses.Name" xml:space="preserve">
-    <value>buttonOngoingCourses</value>
-  </data>
-  <data name="&gt;&gt;buttonOngoingCourses.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonOngoingCourses.Parent" xml:space="preserve">
-    <value>panelPlanStartBottom</value>
-  </data>
-  <data name="&gt;&gt;buttonOngoingCourses.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="panelPlanStartBottom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>237, 261</value>
-  </data>
-  <data name="panelPlanStartBottom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="panelPlanStartBottom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>813, 372</value>
-  </data>
-  <data name="panelPlanStartBottom.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;panelPlanStartBottom.Name" xml:space="preserve">
-    <value>panelPlanStartBottom</value>
-  </data>
-  <data name="&gt;&gt;panelPlanStartBottom.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelPlanStartBottom.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelPlanStartBottom.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
   <metadata name="dataGridViewPlanStart.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3590,6 +2657,30 @@
   </data>
   <data name="&gt;&gt;buttonOngoingCourses.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="panelPlanStartBottom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>237, 261</value>
+  </data>
+  <data name="panelPlanStartBottom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="panelPlanStartBottom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>813, 372</value>
+  </data>
+  <data name="panelPlanStartBottom.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;panelPlanStartBottom.Name" xml:space="preserve">
+    <value>panelPlanStartBottom</value>
+  </data>
+  <data name="&gt;&gt;panelPlanStartBottom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelPlanStartBottom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelPlanStartBottom.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3739,7 +2830,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panelLessonBottom.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
