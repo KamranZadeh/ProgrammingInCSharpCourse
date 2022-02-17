@@ -15,6 +15,8 @@ namespace CourseManagementPortal
 
         internal static class CourseManager
         {
+            const string connectionString = @"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True";
+
             internal static void Add()
             {
                
@@ -24,7 +26,7 @@ namespace CourseManagementPortal
             {
                 var list = new List<Course>();
 
-                using (var connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+                using (var connection = new SqlConnection(connectionString))
                 {
 
 

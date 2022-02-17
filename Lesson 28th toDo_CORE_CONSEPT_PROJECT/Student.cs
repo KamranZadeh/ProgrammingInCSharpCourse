@@ -16,6 +16,8 @@ namespace CourseManagementPortal
 
         internal class StudentManager
         {
+            const string connectionString = @"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True";
+
             internal void Add()
             {
                 
@@ -27,7 +29,7 @@ namespace CourseManagementPortal
             {
                 var list = new List<Student>();
 
-                using (var connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+                using (var connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 

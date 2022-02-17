@@ -74,7 +74,7 @@ namespace CourseManagementPortal
             panelTeacher.BringToFront();
             panelTeacherBottom.BringToFront();
 
-            dataGridViewTeacher.DataSource = TeacherManager.GetTeachers();
+            dataGridViewTeacher.DataSource = GetData("select * from tableTeacher");
         }
 
         private void btnCourse_Click(object sender, EventArgs e)
@@ -98,13 +98,8 @@ namespace CourseManagementPortal
 
             panelPlanStartCourse.BringToFront();
             panelPlanStartBottom.BringToFront();
-        }
 
-        private void btnsettings_Click(object sender, EventArgs e)
-        {
-            pnlNav.Height = btnsettings.Height;
-            pnlNav.Top = btnsettings.Top;
-            btnsettings.BackColor = Color.FromArgb(46, 51, 73);
+            dataGridViewGroups.DataSource = GetData("select * from tableGroups");
         }
 
 
@@ -116,6 +111,43 @@ namespace CourseManagementPortal
 
             panelLesson.BringToFront();
             panelLessonBottom.BringToFront();
+
+            dataGridViewLesson.DataSource = GetData("select * from tableLesson");
+        }
+
+
+        private void buttonGroupsStudents_Click(object sender, EventArgs e)
+        {
+            pnlNav.Height = buttonGroupsStudents.Height;
+            pnlNav.Top = buttonGroupsStudents.Top;
+            buttonGroupsStudents.BackColor = Color.FromArgb(46, 51, 73);
+
+            panelGroupsStudents.BringToFront();
+            panelGroupsStudentsBottom.BringToFront();
+
+            dataGridViewGroupsStudents.DataSource = GetData("select * from tableGroupsStudents");
+        }
+
+
+        private void buttonStudentProgressLeft_Click(object sender, EventArgs e)
+        {
+            pnlNav.Height = buttonStudentProgressLeft.Height;
+            pnlNav.Top = buttonStudentProgressLeft.Top;
+            buttonStudentProgressLeft.BackColor = Color.FromArgb(46, 51, 73);
+
+            panelStudentProgress.BringToFront();
+            panelStudentProgressBottom.BringToFront();
+        }
+
+        private void buttonGroupsStudents_Leave(object sender, EventArgs e)
+        {
+            buttonGroupsStudents.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+
+        private void buttonStudentProgressLeft_Leave(object sender, EventArgs e)
+        {
+            buttonStudentProgressLeft.BackColor = Color.FromArgb(24, 30, 54);
         }
 
         private void btnStudent_Leave(object sender, EventArgs e)
@@ -145,11 +177,6 @@ namespace CourseManagementPortal
 
 
 
-        private void btnsettings_Leave(object sender, EventArgs e)
-        {
-            btnsettings.BackColor = Color.FromArgb(24, 30, 54);
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
@@ -172,7 +199,7 @@ namespace CourseManagementPortal
 
         private void dataGridViewStudent_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridViewStudent.SelectedRows.Count > 0)
+            if (dataGridViewStudent.SelectedRows.Count > 0 && !dataGridViewStudent.CurrentRow.IsNewRow)
             {
                 string Id = dataGridViewStudent.SelectedRows[0].Cells[0].Value + string.Empty;
                 string name = dataGridViewStudent.SelectedRows[0].Cells[1].Value + string.Empty;
@@ -194,7 +221,7 @@ namespace CourseManagementPortal
 
         private void dataGridViewTeacher_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridViewTeacher.SelectedRows.Count > 0)
+            if (dataGridViewTeacher.SelectedRows.Count > 0 && !dataGridViewTeacher.CurrentRow.IsNewRow)
             {
                 string Id = dataGridViewTeacher.SelectedRows[0].Cells[0].Value + string.Empty;
                 string name = dataGridViewTeacher.SelectedRows[0].Cells[1].Value + string.Empty;
@@ -202,18 +229,50 @@ namespace CourseManagementPortal
 
                 dateTimePickerTeacher.Value = (DateTime)dataGridViewTeacher.SelectedRows[0].Cells[3].Value;
 
-                string profession = dataGridViewTeacher.SelectedRows[0].Cells[4].Value + string.Empty;
+                string canTeach1 = dataGridViewTeacher.SelectedRows[0].Cells[4].Value + string.Empty;
+                string canTeach2 = dataGridViewTeacher.SelectedRows[0].Cells[5].Value + string.Empty;
+                string canTeach3 = dataGridViewTeacher.SelectedRows[0].Cells[6].Value + string.Empty;
 
                 textBoxTeacherId.Text = Id;
                 textBoxTeacherName.Text = name;
                 textBoxTeacherSurname.Text = surname;
-                textBoxTeacherProfession.Text = profession;
+
+                if (canTeach1 != "")
+                {
+                    comboBoxCanTeach1.Text = canTeach1;
+                }
+                else
+                {
+                    comboBoxCanTeach1.Text = default;
+                }
+
+                if (canTeach2 != "")
+                {
+                    comboBoxCanTeach2.Text = canTeach2;
+                }
+                else
+                {
+                    comboBoxCanTeach2.Text = default;
+                }
+                if (canTeach3 != "")
+                {
+                    comboBoxCanTeach3.Text = canTeach3;
+                }
+                else
+                {
+                    comboBoxCanTeach3.Text = default;
+                }
+
+
             }
         }
 
+
+        const string connectionString = @"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True";
+
         public void AddStudent()
         {
-            using (var connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 var cmd = connection.CreateCommand();
@@ -251,31 +310,95 @@ namespace CourseManagementPortal
 
         public void AddTeacher()
         {
-            using (var connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                var cmd = connection.CreateCommand();
+                var cmd1 = connection.CreateCommand();
+                var cmd2 = connection.CreateCommand();
+                var cmd3 = connection.CreateCommand();
+                var cmd4 = connection.CreateCommand();
 
-                cmd.CommandText = @"insert into tableTeacher values(@Name, @Surname, @BirthDate, @Profession)";
+                cmd1.CommandText = @"insert into tableTeacher
+                                    (Name, Surname, BirthDate, Canteach1, Canteach2, Canteach3) 
+                                    values(@Name, @Surname, @BirthDate, @Canteach1, @Canteach2, @Canteach3)";
 
-                if (textBoxTeacherName.Text != "" && textBoxTeacherSurname.Text != "" && textBoxTeacherProfession.Text != "")
+                cmd2.CommandText = @"insert into tableTeacher
+                                    (Name, Surname, BirthDate, Canteach1, Canteach2) 
+                                    values(@Name, @Surname, @BirthDate, @Canteach1, @Canteach2)";
+
+                cmd3.CommandText = @"insert into tableTeacher
+                                    (Name, Surname, BirthDate, Canteach1) 
+                                    values(@Name, @Surname, @BirthDate, @Canteach1)";
+
+                cmd4.CommandText = @"insert into tableTeacher
+                                    (Name, Surname, BirthDate) 
+                                    values(@Name, @Surname, @BirthDate)";
+
+                if (textBoxTeacherName.Text != "" && textBoxTeacherSurname.Text != "" && comboBoxCanTeach1.Text != "" && comboBoxCanTeach2.Text != "" && comboBoxCanTeach3.Text != "")
                 {
-                    cmd.Parameters.AddWithValue("Name", textBoxTeacherName.Text);
-                    cmd.Parameters.AddWithValue("Surname", textBoxTeacherSurname.Text);
-                    cmd.Parameters.AddWithValue("BirthDate", dateTimePickerTeacher.Value);
-                    cmd.Parameters.AddWithValue("Profession", textBoxTeacherProfession.Text);
+                    cmd1.Parameters.AddWithValue("Name", textBoxTeacherName.Text);
+                    cmd1.Parameters.AddWithValue("Surname", textBoxTeacherSurname.Text);
+                    cmd1.Parameters.AddWithValue("BirthDate", dateTimePickerTeacher.Value);
+                    cmd1.Parameters.AddWithValue("Canteach1", comboBoxCanTeach1.Text);
+                    cmd1.Parameters.AddWithValue("Canteach2", comboBoxCanTeach2.Text);
+                    cmd1.Parameters.AddWithValue("Canteach3", comboBoxCanTeach3.Text);
 
-                    cmd.ExecuteNonQuery();
+                    cmd1.ExecuteNonQuery();
 
                     MessageBox.Show("Teacher added successfully");
 
                     ClearTeacher();
 
-                    dataGridViewTeacher.DataSource = TeacherManager.GetTeachers();
+                    dataGridViewTeacher.DataSource = GetData("select * from tableTeacher");
+                }
+                else if (textBoxTeacherName.Text != "" && textBoxTeacherSurname.Text != "" && comboBoxCanTeach1.Text != "" && comboBoxCanTeach2.Text != "")
+                {
+                    cmd2.Parameters.AddWithValue("Name", textBoxTeacherName.Text);
+                    cmd2.Parameters.AddWithValue("Surname", textBoxTeacherSurname.Text);
+                    cmd2.Parameters.AddWithValue("BirthDate", dateTimePickerTeacher.Value);
+                    cmd2.Parameters.AddWithValue("Canteach1", comboBoxCanTeach1.Text);
+                    cmd2.Parameters.AddWithValue("Canteach2", comboBoxCanTeach2.Text);
+
+                    cmd2.ExecuteNonQuery();
+
+                    MessageBox.Show("Teacher added successfully");
+
+                    ClearTeacher();
+
+                    dataGridViewTeacher.DataSource = GetData("select * from tableTeacher");
+                }
+                else if (textBoxTeacherName.Text != "" && textBoxTeacherSurname.Text != "" && comboBoxCanTeach1.Text != "")
+                {
+                    cmd3.Parameters.AddWithValue("Name", textBoxTeacherName.Text);
+                    cmd3.Parameters.AddWithValue("Surname", textBoxTeacherSurname.Text);
+                    cmd3.Parameters.AddWithValue("BirthDate", dateTimePickerTeacher.Value);
+                    cmd3.Parameters.AddWithValue("Canteach1", comboBoxCanTeach1.Text);
+
+                    cmd3.ExecuteNonQuery();
+
+                    MessageBox.Show("Teacher added successfully");
+
+                    ClearTeacher();
+
+                    dataGridViewTeacher.DataSource = GetData("select * from tableTeacher");
+                }
+                else if (textBoxTeacherName.Text != "" && textBoxTeacherSurname.Text != "")
+                {
+                    cmd4.Parameters.AddWithValue("Name", textBoxTeacherName.Text);
+                    cmd4.Parameters.AddWithValue("Surname", textBoxTeacherSurname.Text);
+                    cmd4.Parameters.AddWithValue("BirthDate", dateTimePickerTeacher.Value);
+
+                    cmd4.ExecuteNonQuery();
+
+                    MessageBox.Show("Teacher added successfully");
+
+                    ClearTeacher();
+
+                    dataGridViewTeacher.DataSource = GetData("select * from tableTeacher");
                 }
                 else
                 {
-                    MessageBox.Show("Name,Surname and Profession are required");
+                    MessageBox.Show("Name and Surname are required");
                 }
 
             }
@@ -288,12 +411,14 @@ namespace CourseManagementPortal
             textBoxTeacherName.Text = "";
             textBoxTeacherSurname.Text = "";
             dateTimePickerTeacher.Value = dateTimePickerStudentBirthDate.MaxDate;
-            textBoxTeacherProfession.Text = "";
+            comboBoxCanTeach1.Text = default;
+            comboBoxCanTeach2.Text = default;
+            comboBoxCanTeach3.Text = default;
         }
 
         public void AddCourse()
         {
-            using (var connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 var cmd = connection.CreateCommand();
@@ -351,7 +476,7 @@ namespace CourseManagementPortal
 
         public void UpdateStudent()
         {
-            using (SqlConnection connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 var command = connection.CreateCommand();
                 connection.Open();
@@ -392,7 +517,7 @@ namespace CourseManagementPortal
 
         void DeleteStudent()
         {
-            using (SqlConnection connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 var command = connection.CreateCommand();
                 connection.Open();
@@ -418,12 +543,12 @@ namespace CourseManagementPortal
 
         public void UpdateTeacher()
         {
-            using (SqlConnection connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 var command = connection.CreateCommand();
                 connection.Open();
 
-                if (textBoxTeacherName.Text != "" && textBoxTeacherSurname.Text != "" && textBoxTeacherProfession.Text != "")
+                if (textBoxTeacherName.Text != "" && textBoxTeacherSurname.Text != "")
                 {
                     var teacherId = textBoxTeacherId.Text;
 
@@ -437,13 +562,17 @@ namespace CourseManagementPortal
                                                set Name = @Name,
                                                Surname = @Surname,
                                                BirthDate = @BirthDate,
-                                               Profession = @Profession
+                                               CanTeach1 = @CanTeach1,
+                                               CanTeach2 = @CanTeach2,
+                                               CanTeach3 = @CanTeach3
                                                where Id = {teacherId}";
 
                         command.Parameters.AddWithValue("Name", textBoxTeacherName.Text);
                         command.Parameters.AddWithValue("Surname", textBoxTeacherSurname.Text);
                         command.Parameters.AddWithValue("BirthDate", dateTimePickerTeacher.Value);
-                        command.Parameters.AddWithValue("Profession", textBoxTeacherProfession.Text);
+                        command.Parameters.AddWithValue("CanTeach1", comboBoxCanTeach1.Text);
+                        command.Parameters.AddWithValue("CanTeach2", comboBoxCanTeach2.Text);
+                        command.Parameters.AddWithValue("CanTeach3", comboBoxCanTeach3.Text);
                         command.ExecuteNonQuery();
 
                         MessageBox.Show($"Teacher with {teacherId} ID UPDATED successfully");
@@ -454,13 +583,13 @@ namespace CourseManagementPortal
                     MessageBox.Show("All inputs are required");
                 }
 
-                dataGridViewTeacher.DataSource = TeacherManager.GetTeachers();
+                dataGridViewTeacher.DataSource = GetData("select * from tableTeacher");
             }
         }
 
         void DeleteTeacher()
         {
-            using (SqlConnection connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 var command = connection.CreateCommand();
                 connection.Open();
@@ -480,13 +609,13 @@ namespace CourseManagementPortal
                 }
 
                 ClearTeacher();
-                dataGridViewTeacher.DataSource = TeacherManager.GetTeachers();
+                dataGridViewTeacher.DataSource = GetData("select * from tableTeacher");
             }
         }
 
         public void UpdateCourse()
         {
-            using (SqlConnection connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 var command = connection.CreateCommand();
                 connection.Open();
@@ -527,7 +656,7 @@ namespace CourseManagementPortal
 
         void DeleteCourse()
         {
-            using (SqlConnection connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 var command = connection.CreateCommand();
                 connection.Open();
@@ -553,7 +682,7 @@ namespace CourseManagementPortal
 
         private void dataGridViewCourse_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridViewCourse.SelectedRows.Count > 0)
+            if (dataGridViewCourse.SelectedRows.Count > 0 && !dataGridViewCourse.CurrentRow.IsNewRow)
             {
                 string Id = dataGridViewCourse.SelectedRows[0].Cells[0].Value + string.Empty;
                 string name = dataGridViewCourse.SelectedRows[0].Cells[1].Value + string.Empty;
@@ -607,260 +736,198 @@ namespace CourseManagementPortal
             UpdateTeacher();
         }
 
-        bool isInPlannedCourses = false;
-        private void buttonPlannedCourses_Click(object sender, EventArgs e)
-        {
-            dataGridViewPlanStart.DataSource = PlannedCourseManager.GetAll();
-            isInPlannedCourses = true;
-            buttonPlannedCourses.BackColor = Color.FromArgb(255, 255, 128);
-            buttonOngoingCourses.BackColor = DefaultBackColor;
-        }
 
-        private void buttonOngoingCourses_Click(object sender, EventArgs e)
+        public void CreateGroup()
         {
-            dataGridViewPlanStart.DataSource = OngoingCourseManager.GetAll();
-            isInPlannedCourses = false;
-            buttonOngoingCourses.BackColor = Color.FromArgb(255, 255, 128);
-            buttonPlannedCourses.BackColor = DefaultBackColor;
-        }
-
-        public void PlanCourse()
-        {
-            using (var connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 var cmd = connection.CreateCommand();
 
-                cmd.CommandText = @$"insert into tablePlannedCourses 
-                                    values(@StudentId, @TeacherId, @CourseId, @StartDate, @EndDate)";
+                cmd.CommandText = @$"insert into tableGroups values(@GroupName, @TeacherName, @StartDate, @EndDate)";
 
-                var isInt = true;
 
-                try
+                if (!checkBoxStartDate.Checked)
                 {
-                    int.Parse(textBoxPlanStartCourseStudentID.Text);
-                    int.Parse(textBoxPlanStartCourseTeacherID.Text);
-                    int.Parse(textBoxPlanStartCourseCourseID.Text);
-                }
-                catch (Exception)
-                {
-                    isInt = false;
-                }
-
-                if (dateTimePickerStartDate.Value.AddMonths(3) > dateTimePickerEndDate.Value)
-                {
-                    MessageBox.Show("Course period cannot be less than 3 month");
-                }
-                else if (textBoxPlanStartCourseStudentID.Text != "" && textBoxPlanStartCourseTeacherID.Text != "" && textBoxPlanStartCourseCourseID.Text !="" && isInt)
-                {
-                    cmd.Parameters.AddWithValue("StudentId", textBoxPlanStartCourseStudentID.Text);
-                    cmd.Parameters.AddWithValue("TeacherId", textBoxPlanStartCourseTeacherID.Text);
-                    cmd.Parameters.AddWithValue("CourseId", textBoxPlanStartCourseCourseID.Text);
-                    cmd.Parameters.AddWithValue("StartDate", dateTimePickerStartDate.Value);
-                    cmd.Parameters.AddWithValue("EndDate", dateTimePickerEndDate.Value);
-
-                    cmd.ExecuteNonQuery();
-
-                    ClearPlanStart();
-
-                    MessageBox.Show("Planned successfully");
-
-                }
-                else if(!isInt) 
-                {
-                    MessageBox.Show("All ID's should have numeric values");
+                    cmd.Parameters.AddWithValue("StartDate", DBNull.Value);
                 }
                 else
                 {
-                    MessageBox.Show("All ID should be filled");
+                    cmd.Parameters.AddWithValue("StartDate", dateTimePickerStartDate.Value);
                 }
+
+
+                if (!checkBoxEndDate.Checked)
+                {
+                    cmd.Parameters.AddWithValue("EndDate", DBNull.Value);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("EndDate", dateTimePickerEndDate.Value);
+                }
+
+
+                if (dateTimePickerStartDate.Value >= dateTimePickerEndDate.Value && checkBoxStartDate.Checked && checkBoxEndDate.Checked)
+                {
+                    MessageBox.Show("Start date cannot be later than or equal to End date");
+                }
+                else if (textBoxGroupname.Text != "" && comboBoxGroupTeacher.Text != "")
+                {
+                    cmd.Parameters.AddWithValue("GroupName", textBoxGroupname.Text);
+                    cmd.Parameters.AddWithValue("TeacherName", comboBoxGroupTeacher.Text);
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Group created successfully");
+
+                }
+                else
+                {
+                    MessageBox.Show("Group name and teacher name is required");
+                }
+            }
+
+            dataGridViewGroups.DataSource = GetData("select * from tableGroups");
+
+        }
+
+
+        private void dataGridViewGroups_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewGroups.SelectedRows.Count > 0 && !dataGridViewGroups.CurrentRow.IsNewRow)
+            {
+                string groupName = dataGridViewGroups.SelectedRows[0].Cells[1].Value + string.Empty;
+                string teacherName = dataGridViewGroups.SelectedRows[0].Cells[2].Value + string.Empty;
+
+                if (dataGridViewGroups.SelectedRows[0].Cells[3].Value != DBNull.Value)
+                {
+                    dateTimePickerStartDate.Value = (DateTime)dataGridViewGroups.SelectedRows[0].Cells[3].Value;
+                }
+                if (dataGridViewGroups.SelectedRows[0].Cells[4].Value != DBNull.Value)
+                {
+                    dateTimePickerEndDate.Value = (DateTime)dataGridViewGroups.SelectedRows[0].Cells[4].Value;
+                }
+
+                textBoxGroupname.Text = groupName;
+                comboBoxGroupTeacher.Text = teacherName;
+
             }
         }
 
-        public void StartCourse()
+        void DeleteGroup()
         {
-            using (var connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            if (dataGridViewGroups.SelectedRows.Count > 0 && !dataGridViewGroups.CurrentRow.IsNewRow)
+            {
+                string groupId = dataGridViewGroups.SelectedRows[0].Cells[0].Value + string.Empty;
+
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    var cmd = connection.CreateCommand();
+
+                    cmd.CommandText = @$"delete from tableGroups where Id = {groupId}";
+
+                    var answer = MessageBox.Show("Group will be removed permanently\r\n\r\nAre you sure?", "Delete Group", MessageBoxButtons.YesNo);
+
+                    if (answer == DialogResult.Yes)
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                dataGridViewGroups.DataSource = GetData("select * from tableGroups");
+            }
+                
+
+        }
+
+        void UpdateGroup()
+        {
+            string groupId = dataGridViewGroups.SelectedRows[0].Cells[0].Value + string.Empty;
+
+            using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 var cmd = connection.CreateCommand();
 
-                cmd.CommandText = @$"insert into tableOngoingCourses 
-                                    values(@StudentId, @TeacherId, @CourseId, @StartDate, @EndDate)";
+                cmd.CommandText = @$"update tableGroups
+                                  set GroupName = @GroupName,
+                                  TeacherName = @TeacherName,
+                                  StartDate = @StartDate,
+                                  EndDate = @EndDate
+                                  where id = {groupId}";
 
-                var isInt = true;
-
-                try
+                if (!checkBoxStartDate.Checked)
                 {
-                    int.Parse(textBoxPlanStartCourseStudentID.Text);
-                    int.Parse(textBoxPlanStartCourseTeacherID.Text);
-                    int.Parse(textBoxPlanStartCourseCourseID.Text);
+                    cmd.Parameters.AddWithValue("StartDate", DBNull.Value);
                 }
-                catch (Exception)
+                else
                 {
-                    isInt = false;
-                }
-
-                if (dateTimePickerStartDate.Value.AddMonths(3) > dateTimePickerEndDate.Value)
-                {
-                    MessageBox.Show("Course period cannot be less than 3 month");
-                }
-                else if (textBoxPlanStartCourseStudentID.Text != "" && textBoxPlanStartCourseTeacherID.Text != "" && textBoxPlanStartCourseCourseID.Text != "" && isInt)
-                {
-                    cmd.Parameters.AddWithValue("StudentId", textBoxPlanStartCourseStudentID.Text);
-                    cmd.Parameters.AddWithValue("TeacherId", textBoxPlanStartCourseTeacherID.Text);
-                    cmd.Parameters.AddWithValue("CourseId", textBoxPlanStartCourseCourseID.Text);
                     cmd.Parameters.AddWithValue("StartDate", dateTimePickerStartDate.Value);
+                }
+
+
+                if (!checkBoxEndDate.Checked)
+                {
+                    cmd.Parameters.AddWithValue("EndDate", DBNull.Value);
+                }
+                else
+                {
                     cmd.Parameters.AddWithValue("EndDate", dateTimePickerEndDate.Value);
-
-                    cmd.ExecuteNonQuery();
-
-                    ClearPlanStart();
-
-                    MessageBox.Show("Started successfully");
-
                 }
-                else if (!isInt)
+
+
+                if (dateTimePickerStartDate.Value >= dateTimePickerEndDate.Value && checkBoxStartDate.Checked && checkBoxEndDate.Checked)
                 {
-                    MessageBox.Show("All ID's should have numeric values");
+                    MessageBox.Show("Start date cannot be later than or equal to End date");
                 }
-                else
+                else if (textBoxGroupname.Text != "" && comboBoxGroupTeacher.Text != "")
                 {
-                    MessageBox.Show("All ID should be filled");
-                }
-            }
-        }
+                    cmd.Parameters.AddWithValue("GroupName", textBoxGroupname.Text);
+                    cmd.Parameters.AddWithValue("TeacherName", comboBoxGroupTeacher.Text);
 
-        void ClearPlanStart()
-        {
-            textBoxPlanStartCourseStudentID.Text = "";
-            textBoxPlanStartCourseTeacherID.Text = "";
-            textBoxPlanStartCourseCourseID.Text = "";
-            dateTimePickerStartDate.Value = DateTime.Today;
-            dateTimePickerEndDate.Value = DateTime.Today;
-        }
-
-        private void buttonPlanCourse_Click(object sender, EventArgs e)
-        {
-            PlanCourse();
-            buttonPlannedCourses_Click(this, default);
-        }
-
-        private void buttonStartCourse_Click(object sender, EventArgs e)
-        {
-            StartCourse();
-            buttonOngoingCourses_Click(this, default);
-        }
-
-        private void dataGridViewPlanStart_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataGridViewPlanStart.SelectedRows.Count > 0)
-            {
-                string studentId = dataGridViewPlanStart.SelectedRows[0].Cells[0].Value + string.Empty;
-                string teacherId = dataGridViewPlanStart.SelectedRows[0].Cells[1].Value + string.Empty;
-                string courseId = dataGridViewPlanStart.SelectedRows[0].Cells[2].Value + string.Empty;
-
-                dateTimePickerStartDate.Value = (DateTime)dataGridViewPlanStart.SelectedRows[0].Cells[3].Value;
-                dateTimePickerEndDate.Value = (DateTime)dataGridViewPlanStart.SelectedRows[0].Cells[4].Value;
-
-                textBoxPlanStartCourseStudentID.Text = studentId;
-                textBoxPlanStartCourseTeacherID.Text = teacherId;
-                textBoxPlanStartCourseCourseID.Text = courseId;
-
-                textBoxPlanStartCourseStudentID.Enabled = false;
-                textBoxPlanStartCourseTeacherID.Enabled = false;
-                textBoxPlanStartCourseCourseID.Enabled = false;
-
-            }
-        }
-
-        private void dataGridViewPlanStart_CellLeave(object sender, DataGridViewCellEventArgs e)
-        {
-            textBoxPlanStartCourseStudentID.Enabled = true;
-            textBoxPlanStartCourseTeacherID.Enabled = true;
-            textBoxPlanStartCourseCourseID.Enabled = true;
-        }
-
-        private void buttonPlanStartClear_Click(object sender, EventArgs e)
-        {
-            ClearPlanStart();
-        }
-
-        void DeletePlannedOngoingCourse()
-        {
-            using (SqlConnection connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
-            {
-                var command = connection.CreateCommand();
-                connection.Open();
-
-                var studentId = textBoxPlanStartCourseStudentID.Text;
-                var teacherId = textBoxPlanStartCourseTeacherID.Text;
-                var courseId = textBoxPlanStartCourseCourseID.Text;
-
-                if (isInPlannedCourses)
-                {
-                    var answer = MessageBox.Show($"Are you sure to DELETE this PLANNED COURSE?", "Delete Planned course", MessageBoxButtons.YesNo);
+                    var answer = MessageBox.Show("Selected group will be updated\r\n\r\nAre you sure?", "Update Group", MessageBoxButtons.YesNo);
 
                     if (answer == DialogResult.Yes)
                     {
-                        command.CommandText = @$"delete from tablePlannedCourses
-                                                where StudentId = {studentId} 
-                                                and TeacherId = {teacherId} 
-                                                and CourseId = {courseId}";
-
-                        
-                        command.ExecuteNonQuery();
-                        
-
-
-                        MessageBox.Show($"Planned Course DELETED successfully");
-                        buttonPlannedCourses_Click(this, default);
+                        cmd.ExecuteNonQuery();
                     }
+
+                    MessageBox.Show("Group updated successfully");
 
                 }
                 else
                 {
-                    var answer = MessageBox.Show($"Are you sure to DELETE this ONGOING COURSE?", "Delete Ongoing course", MessageBoxButtons.YesNo);
-
-                    if (answer == DialogResult.Yes)
-                    {
-                        command.CommandText = @$"delete from tableOngoingCourses
-                                                where StudentId = {studentId} 
-                                                and TeacherId = {teacherId} 
-                                                and CourseId = {courseId}";
-
-                        command.ExecuteNonQuery();
-                        
-                        MessageBox.Show($"Ongoing Course DELETED successfully");
-                        buttonOngoingCourses_Click(this, default);
-                    }
+                    MessageBox.Show("Group name and teacher name is required");
                 }
-                ClearPlanStart();
-            }
-        }
 
-        private void buttonPlanStartDelete_Click(object sender, EventArgs e)
-        {
-            DeletePlannedOngoingCourse();
+
+                
+            }
+
+            dataGridViewGroups.DataSource = GetData("select * from tableGroups");
+
         }
 
         private static DataTable GetData(string sqlCommand)
-        {
-
-            using (SqlConnection connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
             {
-                var command = connection.CreateCommand();
 
-                command.CommandText = sqlCommand; //accepts command
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    var command = connection.CreateCommand();
 
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                adapter.SelectCommand = command;
+                    command.CommandText = sqlCommand; //accepts command
 
-                DataTable table = new DataTable();
-                table.Locale = System.Globalization.CultureInfo.InvariantCulture;
-                adapter.Fill(table);
-                return table;
+                    SqlDataAdapter adapter = new SqlDataAdapter();
+                    adapter.SelectCommand = command;
+
+                    DataTable table = new DataTable();
+                    table.Locale = System.Globalization.CultureInfo.InvariantCulture;
+                    adapter.Fill(table);
+                    return table;
+                }
             }
-        }
+
 
         void SeeAllStudentOfTheTheacher()
         {
@@ -869,7 +936,7 @@ namespace CourseManagementPortal
                 var isInt = true;
                 try
                 {
-                    int.Parse(textBoxLessonTeacherID.Text);
+                    int.Parse(textBoxLessonLessonName.Text);
                 }
                 catch (Exception)
                 {
@@ -879,14 +946,12 @@ namespace CourseManagementPortal
 
                 if (isInt)
                 {
-                    BindingSource bindingSource1 = new BindingSource();
-                    bindingSource1.DataSource = GetData(@$"select t.Name + ' ' + t.Surname as Teacher, 
+                    dataGridViewLesson.DataSource = GetData(@$"select t.Name + ' ' + t.Surname as Teacher, 
                                                     s.Name + ' ' + s.Surname as Student, s.Id as StudentId, 
                                                     c.Name as Course from tableStudent s
                                                     left join tableOngoingCourses oc on oc.StudentId = s.Id
                                                     join tableCourse c on oc.CourseId = c.Id
-                                                    left join tableTeacher t on oc.TeacherId = t.Id where t.Id = {textBoxLessonTeacherID.Text}");
-                    dataGridViewTeacher_s_Student.DataSource = bindingSource1;
+                                                    left join tableTeacher t on oc.TeacherId = t.Id where t.Id = {textBoxLessonLessonName.Text}");
                 }
                 else
                 {
@@ -903,95 +968,29 @@ namespace CourseManagementPortal
             }
         }
 
-        void SeeAllStudentInfo()
-        {
-            try
-            {
-                var isInt = true;
-                try
-                {
-                    int.Parse(textBoxLessonStudentId.Text);
-                }
-                catch (Exception)
-                {
-                    isInt = false;
-                }
-
-
-                if (isInt)
-                {
-                    BindingSource bindingSource1 = new BindingSource();
-                    bindingSource1.DataSource = GetData(@$"select s.Name + ' ' + s.Surname as Student, 
-                                                        t.Name + ' ' + t.Surname as Teacher, 
-                                                        li.LessonDate, li.comment from tableLessonInfo li
-                                                        left join tableStudent s on li.studentId = s.Id
-                                                        left join tableTeacher t on li.teacherId = t.Id
-                                                        where s.Id={textBoxLessonStudentId.Text}");
-                    dataGridViewTeacher_s_Student.DataSource = bindingSource1;
-                }
-                else
-                {
-                    MessageBox.Show("ID should have numeric value");
-                }
-            }
-            catch (SqlException)
-            {
-                MessageBox.Show("To run this sample replace connection.ConnectionString" +
-                    " with a valid connection string" +
-                    " database accessible to your system", "ERROR",
-                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                Thread.CurrentThread.Abort();
-            }
-        }
-
+        
         private void buttonTeacherS_Students_Click(object sender, EventArgs e)
         {
             SeeAllStudentOfTheTheacher();
         }
 
-        string GetAtLessonOrNot()
+        void AddLesson()
         {
-            string atLessonOrNot;
-            if (checkBoxLesson.Checked)
-            {
-                atLessonOrNot = "at lesson";
-            }
-            else
-            {
-                atLessonOrNot = "not at lesson";
-            }
-
-            return atLessonOrNot;
-        }
-
-        void AddLessonInfo()
-        {
-            using (var connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 var cmd = connection.CreateCommand();
 
-                cmd.CommandText = @$"insert into tableLessonInfo values
-                                    (@teacherId, @studentId, @lessonDate, @atLesson, @comment)";
+                cmd.CommandText = @$"insert into tableLesson values
+                                    (@GroupName, @LessonName, @StudentName, @lessonDate, @atLesson, @comment)";
 
-                var isInt = true;
-
-                try
+                if (textBoxLessonLessonName.Text != "" && comboBoxLessonStudentName.Text != "" && richTextBoxLesson.Text != "")
                 {
-                    int.Parse(textBoxLessonTeacherID.Text);
-                    int.Parse(textBoxLessonStudentId.Text);
-                }
-                catch (Exception)
-                {
-                    isInt = false;
-                }
-
-                if (textBoxLessonTeacherID.Text != "" && textBoxLessonStudentId.Text != "" && richTextBoxLesson.Text != "" && isInt)
-                {
-                    cmd.Parameters.AddWithValue("teacherId", textBoxLessonTeacherID.Text);
-                    cmd.Parameters.AddWithValue("studentId", textBoxLessonStudentId.Text);
+                    cmd.Parameters.AddWithValue("GroupName", comboBoxLessonGroupName.Text);
+                    cmd.Parameters.AddWithValue("LessonName", textBoxLessonLessonName.Text);
+                    cmd.Parameters.AddWithValue("StudentName", comboBoxLessonStudentName.Text);
                     cmd.Parameters.AddWithValue("lessonDate", dateTimePickerLessonDate.Value);
-                    cmd.Parameters.AddWithValue("atLesson", GetAtLessonOrNot());
+                    cmd.Parameters.AddWithValue("atLesson", checkBoxLesson.Checked);
                     cmd.Parameters.AddWithValue("comment", richTextBoxLesson.Text);
 
                     cmd.ExecuteNonQuery();
@@ -1001,30 +1000,25 @@ namespace CourseManagementPortal
                     MessageBox.Show("Lesson info added successfully");
 
                 }
-                else if (!isInt)
-                {
-                    MessageBox.Show("All ID's should have numeric values");
-                }
                 else
                 {
                     MessageBox.Show("All infos should be filled");
                 }
             }
+
+            dataGridViewLesson.DataSource = GetData("select * from tableLesson");
+
         }
 
         private void buttonLessonAddComment_Click(object sender, EventArgs e)
         {
-            AddLessonInfo();
+            AddLesson();
         }
 
-        private void buttonLessonStudentInfo_Click(object sender, EventArgs e)
-        {
-            SeeAllStudentInfo();
-        }
 
         void SearchCourse()
         {
-            using (var connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 var cmd = connection.CreateCommand();
@@ -1046,7 +1040,7 @@ namespace CourseManagementPortal
 
         void SearchTeacher()
         {
-            using (var connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 var cmd = connection.CreateCommand();
@@ -1068,17 +1062,15 @@ namespace CourseManagementPortal
 
         void SearchStudent()
         {
-            using (var connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=CourseManagementPortalData;Trusted_Connection=True; TrustServerCertificate=True"))
+            using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 var cmd = connection.CreateCommand();
+                dataGridViewStudent.DataSource = GetData(@$"declare @name varchar(50) = '%{textBoxStudentSearch.Text}%'
 
-                BindingSource bindingSource1 = new BindingSource();
-                bindingSource1.DataSource = GetData(@$"declare @name varchar(50) = '%{textBoxStudentSearch.Text}%'
-
-                                                    select * from tableStudent
-                                                    where Name like @name");
-                dataGridViewStudent.DataSource = bindingSource1;
+                                                            select * from tableStudent
+                                                            where Name like @name");
+                cmd.Parameters.AddWithValue("name", textBoxStudentSearch.Text);
 
             }
         }
@@ -1086,6 +1078,246 @@ namespace CourseManagementPortal
         private void textBoxStudentSearch_TextChanged(object sender, EventArgs e)
         {
             SearchStudent();
+        }
+
+        void ComboBoxDrop(string query, ComboBox comboBox)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                
+                SqlCommand cmd = new SqlCommand(query, connection);
+
+                using (SqlDataReader saReader = cmd.ExecuteReader())
+                {
+                    while (saReader.Read())
+                    {
+                        string name = saReader.GetString(0);
+                        comboBox.Items.Add(name);
+                    }
+                }
+            }
+        }
+
+        bool hasDroppedOnce = false;
+        private void comboBox1_DropDown(object sender, EventArgs e)
+        {
+            string query = "select name from tableCourse";
+            if (!hasDroppedOnce)
+            {
+                ComboBoxDrop(query, comboBoxCanTeach1);
+            }
+
+            hasDroppedOnce = true;
+
+        }
+
+        bool hasDroppedOnce2 = false;
+        private void comboBoxCanTeach2_DropDown(object sender, EventArgs e)
+        {
+            string query = "select name from tableCourse";
+            if (!hasDroppedOnce2)
+            {
+                ComboBoxDrop(query, comboBoxCanTeach2);
+            }
+
+            hasDroppedOnce2 = true;
+        }
+
+        bool hasDroppedOnce3 = false;
+        private void comboBoxCanTeach3_DropDown(object sender, EventArgs e)
+        {
+            string query = "select name from tableCourse";
+            if (!hasDroppedOnce3)
+            {
+                ComboBoxDrop(query, comboBoxCanTeach3);
+            }
+
+            hasDroppedOnce3 = true;
+        }
+
+        bool hasDroppedOnce4 = false;
+        private void comboBoxGroupTeacher_DropDown(object sender, EventArgs e)
+        {
+            string query = "select name + ' ' + surname from tableTeacher";
+            if (!hasDroppedOnce4)
+            {
+                ComboBoxDrop(query, comboBoxGroupTeacher);
+            }
+
+            hasDroppedOnce4 = true;
+        }
+
+        private void buttonCreateGroup_Click(object sender, EventArgs e)
+        {
+            CreateGroup();
+            ClearGroup();
+        }
+
+        private void buttonPlanStartDelete_Click(object sender, EventArgs e)
+        {
+            DeleteGroup();
+            ClearGroup();
+        }
+
+        private void buttonUpdateGroup_Click(object sender, EventArgs e)
+        {
+            UpdateGroup();
+            ClearGroup();
+        }
+
+        void ClearGroup()
+        {
+            textBoxGroupname.Text = "";
+            comboBoxGroupTeacher.Text = "";
+            dateTimePickerStartDate.Value = DateTime.Today;
+            dateTimePickerEndDate.Value = DateTime.Today;
+        }
+
+        private void buttonGroupClear_Click(object sender, EventArgs e)
+        {
+            ClearGroup();
+        }
+
+
+        bool hasDroppedOnce5 = false;
+        private void comboBoxGSgroupName_DropDown(object sender, EventArgs e)
+        {
+            string query = "select GroupName from tableGroups";
+            if (!hasDroppedOnce5)
+            {
+                ComboBoxDrop(query, comboBoxGSgroupName);
+            }
+
+            hasDroppedOnce5 = true;
+        }
+
+        bool hasDroppedOnce6 = false;
+        private void comboBoxGSstudentName_DropDown(object sender, EventArgs e)
+        {
+            string query = "select name + ' ' + surname from tableStudent";
+            if (!hasDroppedOnce6)
+            {
+                ComboBoxDrop(query, comboBoxGSstudentName);
+            }
+
+            hasDroppedOnce6 = true;
+        }
+
+
+        void AddGroupStudents()
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                var cmd = connection.CreateCommand();
+
+                cmd.CommandText = @$"insert into tableGroupsStudents values
+                                    (@GroupName, @StudentName)";
+
+                cmd.Parameters.AddWithValue("GroupName", comboBoxGSgroupName.Text);
+                cmd.Parameters.AddWithValue("StudentName", comboBoxGSstudentName.Text);
+
+                if (comboBoxGSgroupName.Text != "" && comboBoxGSstudentName.Text != "")
+                {
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Student added to the group");
+
+                    dataGridViewGroupsStudents.DataSource = GetData("select * from tableGroupsStudents");
+                }
+                else
+                {
+                    MessageBox.Show("Cannot add empty information");
+                }
+
+            }
+
+        }
+
+        private void buttonGroupsStudentsAdd_Click(object sender, EventArgs e)
+        {
+            AddGroupStudents();
+        }
+
+        void DeleteGroupStudent()
+        {
+            string id = dataGridViewGroupsStudents.SelectedRows[0].Cells[0].Value + string.Empty;
+
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                var cmd = connection.CreateCommand();
+
+                cmd.CommandText = @$"delete from tableGroupsStudents where Id = {id}";
+
+                var answer = MessageBox.Show("Group's student will be removed permanently\r\n\r\nAre you sure?", "Delete Group's student", MessageBoxButtons.YesNo);
+
+                if (answer == DialogResult.Yes)
+                {
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            dataGridViewGroupsStudents.DataSource = GetData("select * from tableGroupsStudents");
+        }
+
+        private void buttonGroupsStudentsDelete_Click(object sender, EventArgs e)
+        {
+            DeleteGroupStudent();
+        }
+
+        bool hasDroppedOnce7 = false;
+        private void comboBoxLessonStudentName_DropDown(object sender, EventArgs e)
+        {
+            string query = "select StudentName from tableGroupsStudents";
+            if (!hasDroppedOnce7)
+            {
+                ComboBoxDrop(query, comboBoxLessonStudentName);
+            }
+
+            hasDroppedOnce7 = true;
+        }
+
+        bool hasDroppedOnce8 = false;
+        private void comboBoxLessonGroupName_DropDown(object sender, EventArgs e)
+        {
+            string query = "select distinct GroupName from tableGroupsStudents";
+            if (!hasDroppedOnce8)
+            {
+                ComboBoxDrop(query, comboBoxLessonGroupName);
+            }
+
+            hasDroppedOnce8 = true;
+        }
+
+        bool hasDroppedOnce9 = false;
+        private void comboBoxStudentProgress_DropDown(object sender, EventArgs e)
+        {
+            string query = "select distinct StudentName from tableLesson";
+            if (!hasDroppedOnce9)
+            {
+                ComboBoxDrop(query, comboBoxStudentProgress);
+            }
+
+            hasDroppedOnce9 = true;
+        }
+
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonStudentProgress_Click(object sender, EventArgs e)
+        {
+            dataGridViewStudentProgress.DataSource = GetData($@"select StudentName, GroupName, 
+                                                              LessonName, LessonDate,
+                                                              atLesson, comment 
+                                                              from tableLesson where 
+                                                              StudentName = '{comboBoxStudentProgress.Text}'");
+            comboBoxStudentProgress.Text = "";
         }
 
     }
