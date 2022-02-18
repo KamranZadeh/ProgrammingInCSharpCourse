@@ -11,7 +11,6 @@ namespace toDo1and2.Controllers
     {
         public static List<Employee> employees = new();
 
-
         [HttpGet("all")]
         public List<Employee> GetAll()
         {
@@ -29,7 +28,6 @@ namespace toDo1and2.Controllers
         [HttpGet("{id}")]
         public ActionResult<Employee> Get(int id)
         {
-
             try
             {
                 RequestLoggingMiddleware.stopWath.Start();
@@ -44,7 +42,6 @@ namespace toDo1and2.Controllers
             {
                 RequestLoggingMiddleware.stopWath.Stop();
             }
-            
         }
 
         [HttpPost("create")]
@@ -60,7 +57,6 @@ namespace toDo1and2.Controllers
             {
                 RequestLoggingMiddleware.stopWath.Stop();
             }
-            
         } 
     
         [HttpDelete("delete")]
@@ -82,7 +78,6 @@ namespace toDo1and2.Controllers
             {
                 RequestLoggingMiddleware.stopWath.Stop();
             }
-            
         }
 
         [HttpPut("update/{id}")]
@@ -106,7 +101,6 @@ namespace toDo1and2.Controllers
             {
                 RequestLoggingMiddleware.stopWath.Stop();
             }
-            
         }
     }
 }
